@@ -18,8 +18,6 @@ from django.urls import path, include
 from django.views.static import serve
 from django.conf import settings
 from accounts import urls as accounts_urls
-from cart import urls as cart_urls
-from checkout import urls as checkout_urls
 from products import urls as products_urls
 from products.views import product_list
 
@@ -28,8 +26,6 @@ urlpatterns = [
     path('', product_list, name='home'),
  
     path('accounts/', include(accounts_urls)),
-    path('cart/', include(cart_urls)),
-    path('checkout/', include(checkout_urls)),
     path('products/', include(products_urls)),
     
     path('media/<path:path>', serve, {'document_root': settings.MEDIA_ROOT}),

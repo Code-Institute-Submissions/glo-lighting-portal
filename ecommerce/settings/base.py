@@ -40,8 +40,6 @@ INSTALLED_APPS = [
     'products',
     'accounts',
     'django_forms_bootstrap',
-    'cart',
-    'checkout',
     'storages',
 ]
 
@@ -70,7 +68,6 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
-                'cart.contexts.number_of_items_in_cart',
             ],
         },
     },

@@ -1,6 +1,6 @@
 from .base import *
 
-ALLOWED_HOSTS = ["i-commerce-bags-of-fun-humancode.c9users.io", "i-commerce-bags-of-fun-humancode.c9users.io"]
+ALLOWED_HOSTS = ["lighting-portal-humancode.c9users.io", "lighting-portal-humancode.c9users.io"]
 
 DATABASES = {
     'default': {
@@ -8,7 +8,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
