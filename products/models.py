@@ -1,12 +1,13 @@
 from django.db import models
-
+from accounts.models import Brand
 # Create your models here.
 MATERIAL_CHOICES = (
     	('X', 'choose material'),
     	('metal sprayed copper', 'metal sprayed copper'),	
     	('metal sprayed silver', 'metal sprayed silver'),
     	('aluminium', 'Abstract'),
-    	('copper', 'copper')
+    	('copper', 'copper'),
+    	('vineer', 'vineer')
     )
     
 LAMP_TYPE_CHOICES = (
@@ -21,14 +22,15 @@ LAMP_TYPE_CHOICES = (
 FITTING_CHOICES = (
     ( 'E27', 'E27'),
     ( 'E16', '16' ),
-    ( 'GU10', 'GU10')
+    ( 'GU10', 'GU10'),
+    ( 'LED built in', 'LED built in')
     
     
     )
     
     
 COLOUR_CHOICE = (
-     ( 'red', 'yellow'),   
+     ( 'black','white','grey','red', 'yellow')   
     )    
 
 
@@ -47,6 +49,7 @@ class Lamp(models.Model):
     transformer_included=models.BooleanField(default=True)
     lamp_type = models.CharField(max_length=15, blank=False, null=False, default='X', choices=LAMP_TYPE_CHOICES)
     miscellaneous = models.TextField(blank=True, null=True)
+    brand = models.ForeignKey(Brand, null=False, related_name="line_items", on_delete=models.CASCADE)
     
     def __str__(self):
         return self.name

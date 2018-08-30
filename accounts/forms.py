@@ -5,3 +5,22 @@ class BrandRegistrationForm(forms.ModelForm):
     class Meta:
         model = Brand
         fields=['name','logo']
+        
+        
+        
+    
+    
+
+
+
+
+
+   
+   
+
+   
+
+  
+        
+        
+        

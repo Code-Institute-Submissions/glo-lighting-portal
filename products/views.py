@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, HttpResponse
 from .models import Lamp
+from .forms import LampForm
 
 
 # Create your views here.
@@ -12,3 +13,37 @@ def product_detail(request, id):
     product = get_object_or_404(Lamp, pk=id)
     return render(request, "products/product_detail.html" , {'product': product})
     
+    
+def add_product(request):
+    return render(request, "products/lamp_form.html")
+    
+    
+    
+def add_product(request):
+    if request.method=="POST":
+        
+        form = LampForm(request.POST, request.FILES)
+        if form.is_valid():
+            product = form.save(commit=False)
+            product.brand = request.user.brand
+            product.save()
+            return redirect("product_list")
+            
+    else:
+        form = LampForm()
+            
+    
+    return render(request, "products/product_form.html", {'form': form})
+    
+def edit_product(request, id):
+    product = get_object_or_404(Lamp, pk=id)
+    
+    if request.method=="POST":
+         form = LampForm(request.POST, request.FILES, instance=product)
+         if form.is_valid():
+             form.save()
+             return redirect("product_detail", id=id)
+    else:
+        form = LampForm(instance=product)
+    
+    return render(request, "products/product_form.html", {'form': form})
