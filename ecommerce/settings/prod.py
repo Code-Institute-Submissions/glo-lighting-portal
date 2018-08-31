@@ -1,7 +1,7 @@
 from .base import *
 import dj_database_url
 
-ALLOWED_HOSTS = ["lighting-portal-humancode.c9users.io", "icommerce-bagsoffun.herokuapp.com"]
+ALLOWED_HOSTS = ["glo-lighting.herokuapp.com"]
 
 AWS_STORAGE_BUCKET_NAME = os.environ.get("AWS_STORAGE_BUCKET_NAME")
 AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
