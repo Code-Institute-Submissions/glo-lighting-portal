@@ -8,10 +8,6 @@ ALLOWED_HOSTS = ["lighting-portal-humancode.c9users.io", "icommerce-bagsoffun.he
 
 import dj_database_url
 
-DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-}
-
 
 
 AWS_STORAGE_BUCKET_NAME = os.environ.get("AWS_STORAGE_BUCKET_NAME")

@@ -55,5 +55,12 @@ class Lamp(models.Model):
         return self.name
         
         
+class LampImage(models.Model):
+    image = models.ImageField(upload_to="images" , null=True, blank=True)
+    lamp = models.ForeignKey(Lamp, null=False, related_name="images", on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.lamp.name
+        
         
         

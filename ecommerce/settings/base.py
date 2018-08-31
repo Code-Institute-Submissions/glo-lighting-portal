@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'accounts',
     'storages',
     'django_forms_bootstrap',
+    'cart',
+    'checkout',
+    
 ]
 
 MIDDLEWARE = [
@@ -79,8 +82,9 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-
-
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
@@ -119,6 +123,5 @@ LOGOUT_REDIRECT_URL = '/'
 
 STRIPE_PUBLISHABLE_KEY = os.getenv('STRIPE_PUBLISHABLE_KEY')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
-
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"

@@ -17,7 +17,7 @@ def product_detail(request, id):
 def add_product(request):
     return render(request, "products/lamp_form.html")
     
-    
+
     
 def add_product(request):
     if request.method=="POST":
