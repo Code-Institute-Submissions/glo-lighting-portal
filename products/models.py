@@ -5,10 +5,11 @@ MATERIAL_CHOICES = (
     	('X', 'choose material'),
     	('metal sprayed copper', 'metal sprayed copper'),	
     	('metal sprayed silver', 'metal sprayed silver'),
-    	('aluminium', 'Abstract'),
+    	('metal','metal'),
+    	('aluminium', 'aluminium'),
     	('copper', 'copper'),
     	('vineer', 'vineer')
-    )
+    )   ('fibreglass','fibreglass')
     
 LAMP_TYPE_CHOICES = (
     	('X', 'choose type'),
