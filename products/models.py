@@ -8,8 +8,9 @@ MATERIAL_CHOICES = (
     	('metal','metal'),
     	('aluminium', 'aluminium'),
     	('copper', 'copper'),
-    	('vineer', 'vineer')
-    )   ('fibreglass','fibreglass')
+    	('vineer', 'vineer'),
+      ('fibreglass','fibreglass'),
+      ) 
     
 LAMP_TYPE_CHOICES = (
     	('X', 'choose type'),
