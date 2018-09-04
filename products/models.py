@@ -22,6 +22,7 @@ LAMP_TYPE_CHOICES = (
     )    
 
 FITTING_CHOICES = (
+    ('X', 'fitting'),
     ( 'E27', 'E27'),
     ( 'E16', '16' ),
     ( 'GU10', 'GU10'),
