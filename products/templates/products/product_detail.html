@@ -22,13 +22,13 @@
                     <p>{{product.colour}}</p>
                     <p>{{product.bruto_price}}</p>
                     <p>{{product.transformer_included}}</p>
-                    <p>{{product.lamp_type}}</p>
+                    <p>{{product.product_type}}</p>
                     <p>{{product.miscellaneous}}</p>
        <span class="text-warning">
            <div class="row">
             
-        {% for lamp_image in product.images.all %}    
-            <img src="{{MEDIA_URL}}{{ lamp_image.image }}">
+        {% for product_image in product.images.all %}    
+            <img src="{{MEDIA_URL}}{{ product_image.image }}">
         {% endfor %}
             
             

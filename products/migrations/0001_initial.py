@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Lamp',
+            name='Product',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('image', models.ImageField(blank=True, null=True, upload_to='images')),
@@ -27,7 +27,7 @@ class Migration(migrations.Migration):
                 ('art_No', models.CharField(max_length=40)),
                 ('bruto_price', models.DecimalField(decimal_places=2, max_digits=6)),
                 ('transformer_included', models.BooleanField(default=True)),
-                ('lamp_type', models.CharField(max_length=15)),
+                ('product_type', models.CharField(max_length=15)),
                 ('miscellaneous', models.TextField()),
             ],
         ),

@@ -1,5 +1,5 @@
 from django.db import models
-from products.models import Lamp
+from products.models import Product
 
 class Order(models.Model):
     full_name = models.CharField(max_length=50, blank=False)
@@ -14,7 +14,7 @@ class Order(models.Model):
     def __str__(self):
         return "{0}-{1}-{2}".format(self.id, self.date, self.full_name)
         
-class OrderLineItem(models.Model):
+class OrderLineItem(models.Product):
     order = models.ForeignKey(Order, null=False, related_name="line_items", on_delete=models.CASCADE)
     product_id = models.ForeignKey(Product, null=False, related_name="orders", on_delete=models.CASCADE)
     quantity = models.IntegerField(blank=False)

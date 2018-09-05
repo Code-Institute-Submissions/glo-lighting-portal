@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404, HttpResponse
-from products.models import Lamp 
+from products.models import  
 from .utils import get_cart_items_and_total
 
 # Create your views here.

@@ -11,7 +11,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterField(
-            model_name='lamp',
+            model_name='product',
             name='fitting',
             field=models.CharField(blank=True, choices=[('X', 'fitting'), ('E27', 'E27'), ('E16', '16'), ('GU10', 'GU10'), ('LED built in', 'LED built in')], default='X', max_length=40, null=True),
         ),

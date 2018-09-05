@@ -11,17 +11,17 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterField(
-            model_name='lamp',
+            model_name='product',
             name='fitting',
             field=models.CharField(blank=True, choices=[('E27', 'E27'), ('E16', '16'), ('GU10', 'GU10')], default='X', max_length=40, null=True),
         ),
         migrations.AlterField(
-            model_name='lamp',
-            name='lamp_type',
+            model_name='product',
+            name='product_type',
             field=models.CharField(choices=[('X', 'choose type'), ('suspension', 'suspension'), ('floor', 'floor'), ('table', 'table'), ('wall/ceiling', 'wall/ceiling'), ('outside', 'outside')], default='X', max_length=15),
         ),
         migrations.AlterField(
-            model_name='lamp',
+            model_name='product',
             name='material',
             field=models.CharField(blank=True, choices=[('X', 'choose material'), ('metal sprayed copper', 'metal sprayed copper'), ('metal sprayed silver', 'metal sprayed silver'), ('aluminium', 'Abstract'), ('copper', 'copper')], default='X', max_length=40, null=True),
         ),

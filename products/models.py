@@ -37,7 +37,7 @@ COLOUR_CHOICE = (
     )    
 
 
-class Lamp(models.Model):
+class Product(models.Model):
     image = models.ImageField(upload_to="images" , null=True, blank=True)
     name= models.CharField(max_length=40, blank=False, null=False)
     fitting= models.CharField(max_length=40, blank=True, null=True, default='X', choices=FITTING_CHOICES)
@@ -50,7 +50,7 @@ class Lamp(models.Model):
     art_No= models.CharField(max_length=40, blank=False, null=False)
     bruto_price= models.DecimalField(max_digits=6, decimal_places=2, blank=False, null=False)
     transformer_included=models.BooleanField(default=True)
-    lamp_type = models.CharField(max_length=15, blank=False, null=False, default='X', choices=LAMP_TYPE_CHOICES)
+    product_type = models.CharField(max_length=15, blank=False, null=False, default='X', choices=LAMP_TYPE_CHOICES)
     miscellaneous = models.TextField(blank=True, null=True)
     brand = models.ForeignKey(Brand, null=False, related_name="line_items", on_delete=models.CASCADE)
     
@@ -58,12 +58,12 @@ class Lamp(models.Model):
         return self.name
         
         
-class LampImage(models.Model):
+class ProductImage(models.Model):
     image = models.ImageField(upload_to="images" , null=True, blank=True)
-    lamp = models.ForeignKey(Lamp, null=False, related_name="images", on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, null=False, related_name="images", on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.lamp.name
+        return self.product.name
         
         
         

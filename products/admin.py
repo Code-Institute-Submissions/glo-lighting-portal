@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Lamp, LampImage
+from .models import Product, ProductImage
 
 # Register your models here.
-admin.site.register(Lamp)
-admin.site.register(LampImage)
+admin.site.register(Product)
+admin.site.register(ProductImage)

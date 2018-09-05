@@ -6,17 +6,17 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('products', '0005_lamp_brand'),
+        ('products', '0005_product_brand'),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='lamp',
+            model_name='product',
             name='fitting',
             field=models.CharField(blank=True, choices=[('E27', 'E27'), ('E16', '16'), ('GU10', 'GU10'), ('LED built in', 'LED built in')], default='X', max_length=40, null=True),
         ),
         migrations.AlterField(
-            model_name='lamp',
+            model_name='product',
             name='material',
             field=models.CharField(blank=True, choices=[('X', 'choose material'), ('metal sprayed copper', 'metal sprayed copper'), ('metal sprayed silver', 'metal sprayed silver'), ('aluminium', 'Abstract'), ('copper', 'copper'), ('vineer', 'vineer')], default='X', max_length=40, null=True),
         ),

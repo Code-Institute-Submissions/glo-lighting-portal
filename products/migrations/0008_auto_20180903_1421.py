@@ -6,12 +6,12 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('products', '0007_lampimage'),
+        ('products', '0007_productimage'),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='lamp',
+            model_name='product',
             name='material',
             field=models.CharField(blank=True, choices=[('X', 'choose material'), ('metal sprayed copper', 'metal sprayed copper'), ('metal sprayed silver', 'metal sprayed silver'), ('metal', 'metal'), ('aluminium', 'aluminium'), ('copper', 'copper'), ('vineer', 'vineer'), ('fibreglass', 'fibreglass')], default='X', max_length=40, null=True),
         ),

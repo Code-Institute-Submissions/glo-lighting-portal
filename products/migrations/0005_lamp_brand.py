@@ -13,7 +13,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AddField(
-            model_name='lamp',
+            model_name='product',
             name='brand',
             field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, related_name='line_items', to='accounts.Brand'),
             preserve_default=False,

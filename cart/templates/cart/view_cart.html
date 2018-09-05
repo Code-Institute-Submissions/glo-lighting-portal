@@ -15,14 +15,14 @@
     <tbody>
         {% for item in cart_items %}
         <tr>
-            <td><img width="100" height="100" src="{{MEDIA_URL}}{{item.lamp.image}}"/></td>    
-            <td>{{ item.lamp.name }}</td>    
+            <td><img width="100" height="100" src="{{MEDIA_URL}}{{item.product.image}}"/></td>    
+            <td>{{ item.product.name }}</td>    
             <td>{{ item.quantity}}</td>    
-            <td>€{{ item.lamp.bruto_price }}</td>
+            <td>€{{ item.product.bruto_price }}</td>
             <td>€{{ item.total}}</td>
                   <td><form action="{% url 'remove_item' %}" method="post">
                 {% csrf_token %}
-                <input type="hidden" name="id" value="{{item.lamp.id}}"/>
+                <input type="hidden" name="id" value="{{item.product.id}}"/>
                 <input type="submit" class="btn btn-success" value="Remove"/>
                 </form>
             </td>

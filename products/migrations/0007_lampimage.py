@@ -12,11 +12,11 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='LampImage',
+            name='ProductImage',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('image', models.ImageField(blank=True, null=True, upload_to='images')),
-                ('lamp', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='images', to='products.Lamp')),
+                ('product', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='images', to='products.Product')),
             ],
         ),
     ]

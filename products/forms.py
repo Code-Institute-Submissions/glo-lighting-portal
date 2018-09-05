@@ -1,10 +1,10 @@
-from .models import Lamp
+from .models import Product
 from django import forms
 
-class LampForm(forms.ModelForm):
+class ProductForm(forms.ModelForm):
     class Meta:
-        model = Lamp
-        fields=['name','image','fitting','material','mains','height','width','diameter','colour','art_No','transformer_included','lamp_type' ,'bruto_price' ,'miscellaneous']
+        model = Product
+        fields=['name','image','fitting','material','mains','height','width','diameter','colour','art_No','transformer_included','product_type' ,'bruto_price' ,'miscellaneous']
         
 
 
