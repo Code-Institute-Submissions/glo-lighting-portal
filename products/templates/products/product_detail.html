@@ -1,66 +1,85 @@
+{% extends "base.html" %} {% block content %}
+<div class="container-fluid">
 
-{% extends "base.html" %}
-{% block content %}
-   <div class="row">
-
-    <div class="col-lg-6">
-
-     <div class="card mt-4">
-      <img width="500" height="500" class="card-img-top img-fluid" src="{{MEDIA_URL}}{{product.image}}" alt="">
-      <div class="card-body">
-       <h3 class="card-title">{{product.name}}</h3>
-       <h4>€{{product.bruto_price}}</h4>
-                    <p>{{product.brand}}</p>
-                    <p>{{product.fitting}}</p>
-                    <p>{{product.material}}</p>
-                    <p>{{product.mains}}</p>
-                    <p>{{product.height}}</p>
-                    <p>{{product.width}}</p>
-                    <p>{{product.diameter}}</p>
-                    <p>{{product.colour}}</p>
-                    <p>{{product.art_No}}</p>
-                    <p>{{product.colour}}</p>
-                    <p>{{product.bruto_price}}</p>
-                    <p>{{product.transformer_included}}</p>
-                    <p>{{product.product_type}}</p>
-                    <p>{{product.miscellaneous}}</p>
-       <span class="text-warning">
-           <div class="row">
-            
-        {% for product_image in product.images.all %}    
-            <img src="{{MEDIA_URL}}{{ product_image.image }}">
-        {% endfor %}
-            
-            
-    <div class="col-lg-6">
-        </div>
-        {% for star in product.stars %}
-        <i class="fa fa-star"></i>
+    <div class="container">
         
-        {% endfor %}
-        {% if product.needs_half_star %}
-        <i class="fa fa-star-half"></i>
-        {% endif %}        
-       </span>
-      </div>
-     </div>
-     <!-- /.card -->
-     
-     <div>
-     <a href="{% url 'edit_product' product.id %}" class="btn btn-success">Edit</a>
-     </div>
-     
-     
-     <form action="{% url 'add_to_cart' %}" method="post">
-      {% csrf_token %}
-      <input type="hidden" name="id" value="{{product.id}}"/>
-      <p><input type="hidden" name="quantity" value="1"/></p>
-      <p><input class="btn btn-success" type="submit" value="Add To Cart"/></p>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4" style="background-color:white;">
+
+                <img width="400px" height="auto" class="card-img-top img-fluid" src="{{MEDIA_URL}}{{product.image}}" alt="">
+
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-3" style="background-color:white;">
+                    <h3 class="card-title">{{product.name}} <img width="400px" height="auto" class="card-img-top img-fluid" src="{{MEDIA_URL}}{{product.logo}}" alt="">
+                    
+                    
+                    <h4>€{{product.bruto_price}}</h4>
+                    {% if product.brand %}
+                    Brand:{{product.brand}}
+                    {% endif %}<br> 
+                    
+                    {% if product.fitting %}
+                    Fitting:{{product.fitting}}
+                    {% endif %}<br>  
+                    
+                    {% if product.material %}
+                    Material:{{product.material}}
+                    {% endif %}<br>  
+                    
+                    {% if product.mains %}
+                    Mains:{{product.mains}}
+                    {% endif %}<br>
+                    
+                    {% if product.height %}
+                    Height:{{product.height}}
+                    {% endif %}<br>
+                    
+                    {% if product.width %}
+                    Width:{{product.width}}
+                    {% endif %}<br>
+                    
+                    {% if product.diameter %}
+                    Diameter:{{product.diameter}}
+                    {% endif %}<br>
+                    
+                    {% if product.color %}
+                    Colour:{{product.colour}}
+                    {% endif %}<br>
+                    
+                    {% if product.art_No %}
+                    Art.No.{{product.art_No}}
+                    {% endif %}<br>
+
+                    {% if product.transformer_included %}
+                    Transformer:{{product.transformer_included}}
+                    {% endif %}<br>
+                    
+                    {% if product.miscellaneous %}
+                    {{product.miscellaneous}}
+                    {% endif %}
+                    <br>
+                    
+                    {% for star in product.stars %}
+                    <i class="fa fa-star"></i> {% endfor %} {% if product.needs_half_star %}
+                    <i class="fa fa-star-half"></i> {% endif %}
+
+                    <span class="text-warning"> </div>
+                <div class="col-xs-12 col-sm-4" style="background-color:white;">
+                    {% for product_image in product.images.all %}
+                <div class="project_photo"><img src="{{MEDIA_URL}}{{ product_image.image }}"></div>
+                {% endfor %}
+
+        </div>
+    </div>
+</div>
+<div class="add-to-cart">
+<form action="{% url 'add_to_cart' %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="id" value="{{product.id}}" />
+        <p><input type="hidden" name="quantity" value="1" /></p>
+        <p><input class="btn btn-success" type="submit" value="Add To Cart" /></p>
     </form>
     </div>
-     
-    </div>
-    <!-- /.col-lg-9 -->
-
-   </div>
 {% endblock content %}

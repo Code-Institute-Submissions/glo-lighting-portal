@@ -2,7 +2,11 @@ from django.shortcuts import render, redirect, get_object_or_404, HttpResponse
 from .models import Product
 from .forms import ProductForm
 
-
+def filter_by_product_type(request,type):
+    products = Product.objects.filter(product_type=type)
+    return render(request, "products/product_list.html" , {'products': products})
+    
+    
 # Create your views here.
 def product_list(request):
     products = Product.objects.all()

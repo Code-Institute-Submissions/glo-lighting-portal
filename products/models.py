@@ -17,7 +17,8 @@ LAMP_TYPE_CHOICES = (
     	('suspension', 'suspension'),	
     	('floor', 'floor'),
     	('table', 'table'),
-    	('wall/ceiling', 'wall/ceiling'),
+    	('wall-ceiling', 'wall-ceiling'),
+    	('recessed', 'recessed'),
     	('outside', 'outside'),
     )    
 
@@ -33,6 +34,7 @@ FITTING_CHOICES = (
     
     
 COLOUR_CHOICE = (
+     ('X', 'colour'),
      ( 'black','white','grey','red', 'yellow')   
     )    
 

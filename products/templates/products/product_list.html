@@ -4,16 +4,15 @@
         {% for product in products %}
         <div class="col-sm-4 col-lg-4 col-md-4">
             <div class="thumbnail">
-                <img src="{{MEDIA_URL}}{{product.image}}" alt="">
+                <a href="{% url 'product_detail' product.id %}"><img src="{{MEDIA_URL}}{{product.image}}" alt="{{product.name}}"></a>
                 <div class="caption">
-                    <h4 class="pull-right">€{{product.price}}</h4>
-                    <h4><a href="{% url 'product_detail' product.id %}">{{product.name}}</a>
-                    </h4>
-                    <p>{{product.description | linebreaksbr }}</p>
-                </div>
-                <div class="ratings">
+                    <h4 class="pull-right">€{{product.bruto_price}}</h4>
+                    <h4>{{product.name}}</h4>
+                              <div class="ratings">
                     <p class="pull-right">{{product.reviews_received.all|length}} reviews</p>
-                    <p>
+                    <br>
+                </div>
+
                         {% for star in product.stars %}
                         <i class="fa fa-star"></i> {% endfor %} {% if product.needs_half_star %}
                         <i class="fa fa-star-half"></i> {% endif %}

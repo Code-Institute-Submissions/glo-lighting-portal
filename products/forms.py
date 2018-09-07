@@ -7,9 +7,10 @@ class ProductForm(forms.ModelForm):
         fields=['name','image','fitting','material','mains','height','width','diameter','colour','art_No','transformer_included','product_type' ,'bruto_price' ,'miscellaneous']
         
 
+        
 
-        
-        
+
+
    
 
 

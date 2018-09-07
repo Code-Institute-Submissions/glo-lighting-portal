@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ECommerce</title>
+    <title>Glo-lighting</title>
 
     {% block head_style %}
     <link rel="stylesheet" href="https://bootswatch.com/3/sandstone/bootstrap.min.css">
@@ -30,11 +30,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">ECommerce</a>
+                <a class="navbar-brand" href="/">logo</a>
             </div>
             
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
+                  <li><a href="{% url 'filter' 'suspension' %}">Suspension</a></li>
+                  <li><a href="{% url 'filter' 'floor' %}">Floor</a></li>
+                  <li><a href="{% url 'filter' 'table' %}">Table</a></li>
+                  <li><a href="{% url 'filter' 'wall-ceiling' %}">Wall/Ceiling</a></li>
+                  <li><a href="{% url 'filter' 'outside' %}">Outside</a></li>
                     {% if user.is_authenticated %}
                         <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
                         <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a></li>
@@ -63,7 +68,7 @@
         </div>
     {% endif %}
     
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
         {% block content %} {% endblock %}
         </div>
@@ -82,7 +87,7 @@
 
           <!-- Content -->
           <h5 class="text-uppercase">Footer Content</h5>
-          <p>Here you can use rows and columns here to organize your footer content.</p>
+          <p>Here is where I want the logos.</p>
 
         </div>
         <!-- Grid column -->
@@ -120,18 +125,13 @@
             <h5 class="text-uppercase">Links</h5>
 
             <ul class="list-unstyled">
+                {% for brand in brands %}
+                    {{ products.brand }}
+                {% endfor %}
               <li>
-                <a href="#!">Link 1</a>
+                <a href="#!">if you are a manufacture of brand and would like to expose your products click here</a>
               </li>
-              <li>
-                <a href="#!">Link 2</a>
-              </li>
-              <li>
-                <a href="#!">Link 3</a>
-              </li>
-              <li>
-                <a href="#!">Link 4</a>
-              </li>
+             
             </ul>
 
           </div>
@@ -144,8 +144,8 @@
     <!-- Footer Links -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2018 Copyright:
-      <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:Stevie Bolton
+      <a href="https://mdbootstrap.com/bootstrap-tutorial/"></a>
     </div>
     <!-- Copyright -->
 

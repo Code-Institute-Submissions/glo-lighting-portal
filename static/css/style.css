@@ -2,16 +2,62 @@ body {
     font-family: Arial;
     padding-top: 100px;
 }
+
 footer {
     margin-top: 40px;
     padding-top: 40px;
     padding-bottom: 40px;
     border-top: 1px solid #ededed;
-    color: #A9A9A9;
+    color: white;
+    background-color: #3e3f3a;
 }
 .icon-bar {
-    background-color: #fff;
+    background-color: red;
 }
 .accountform {
     padding-top: 20px;
 }
+
+
+
+/* unvisited link */
+a:link {
+    color: white;
+}
+
+/* visited link */
+a:visited {
+    color: white;
+}
+
+/* mouse over link */
+a:hover {
+    color: white;
+}
+
+/* selected link */
+a:active {
+    color: gold;
+}
+
+
+.project_photo img{
+    width: 150px;
+    height:auto; 
+    display:block;
+    padding-left:3px;
+    padding-bottom:3px;
+    
+    radius:important!4px;
+    float: left;
+}
+
+.thumbnail ratings{
+    top:20px;
+}
+
+.add-to-cart{
+float:right;
+}
+
+

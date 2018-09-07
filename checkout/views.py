@@ -31,7 +31,7 @@ def confirm_checkout(request):
         for product, quantity in cart.items():
             line_item = OrderLineItem(
                 order=order,
-                product_id = product,
+                product_id = get_object_or_404(Product, pk=product),
                 quantity = quantity
                 )
             line_item.save()
