@@ -8,6 +8,9 @@ def filter_by_product_type(request,type):
     
     
 # Create your views here.
+def project_list(request):
+    return render(request, "product/project_list.html")
+
 def product_list(request):
     products = Product.objects.all()
     return render(request, "products/product_list.html" , {'products': products})
