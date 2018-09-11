@@ -2,18 +2,18 @@ from django.db import models
 from accounts.models import Brand
 # Create your models here.
 MATERIAL_CHOICES = (
-    	('X', 'choose material'),
+    	('choose material', 'choose material'),
     	('metal sprayed copper', 'metal sprayed copper'),	
     	('metal sprayed silver', 'metal sprayed silver'),
     	('metal','metal'),
     	('aluminium', 'aluminium'),
     	('copper', 'copper'),
     	('vineer', 'vineer'),
-      ('fibreglass','fibreglass'),
+        ('fibreglass','fibreglass'),
       ) 
     
 LAMP_TYPE_CHOICES = (
-    	('X', 'choose type'),
+    	('choose type', 'choose type'),
     	('suspension', 'suspension'),	
     	('floor', 'floor'),
     	('table', 'table'),
@@ -23,7 +23,7 @@ LAMP_TYPE_CHOICES = (
     )    
 
 FITTING_CHOICES = (
-    ('X', 'fitting'),
+    ('fitting', 'fitting'),
     ( 'E27', 'E27'),
     ( 'E16', '16' ),
     ( 'GU10', 'GU10'),
@@ -42,13 +42,18 @@ COLOUR_CHOICE = (
 class Product(models.Model):
     image = models.ImageField(upload_to="images" , null=True, blank=True)
     name= models.CharField(max_length=40, blank=False, null=False)
-    fitting= models.CharField(max_length=40, blank=True, null=True, default='X', choices=FITTING_CHOICES)
     material= models.CharField(max_length=40, blank=True, null=True,default='X', choices=MATERIAL_CHOICES)
     mains= models.CharField(max_length=40, blank=False, null=False)
     height= models.CharField(max_length=40, blank=True, null=True)
     width= models.CharField(max_length=40, blank=True, null=True)
     diameter= models.CharField(max_length=40, blank=True, null=True)
     colour= models.CharField(max_length=40, blank=True, null=True)
+    fitting= models.CharField(max_length=40, blank=True, null=True, default='X', choices=FITTING_CHOICES)
+    bulb= models.CharField(max_length=40, blank=True, null=True)
+    kelvin= models.IntegerField(blank=True, null=True)
+    cri = models.IntegerField(blank=True, null=True)
+    lumens= models.IntegerField(blank=True, null=True)
+    energy_label = models.ImageField(upload_to="images" , null=True, blank=True)
     art_No= models.CharField(max_length=40, blank=False, null=False)
     bruto_price= models.DecimalField(max_digits=6, decimal_places=2, blank=False, null=False)
     transformer_included=models.BooleanField(default=True)

@@ -20,35 +20,34 @@ footer {
 
 
 
-/* unvisited link */
+ unvisited link 
 a:link {
     color: white;
 }
 
-/* visited link */
+ visited link 
 a:visited {
     color: white;
 }
 
-/* mouse over link */
+ mouse over link 
 a:hover {
     color: white;
 }
 
-/* selected link */
+ selected link 
 a:active {
     color: gold;
 }
 
 
 .project_photo img{
-    width: 150px;
+    width: 160px;
     height:auto; 
     display:block;
+    border-radius: 10px;
     padding-left:3px;
     padding-bottom:3px;
-    
-    radius:important!4px;
     float: left;
 }
 
@@ -60,4 +59,9 @@ a:active {
 float:right;
 }
 
+.edit_button btn btn-success{
+  float:right; 
+  display:hidden;
+    
+}
 
