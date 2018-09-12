@@ -2,7 +2,7 @@ from django.db import models
 from accounts.models import Brand
 # Create your models here.
 MATERIAL_CHOICES = (
-    	('choose material', 'choose material'),
+    	('X', 'choose material'),
     	('metal sprayed copper', 'metal sprayed copper'),	
     	('metal sprayed silver', 'metal sprayed silver'),
     	('metal','metal'),
@@ -13,7 +13,7 @@ MATERIAL_CHOICES = (
       ) 
     
 LAMP_TYPE_CHOICES = (
-    	('choose type', 'choose type'),
+    	('X', 'choose type'),
     	('suspension', 'suspension'),	
     	('floor', 'floor'),
     	('table', 'table'),
@@ -23,10 +23,11 @@ LAMP_TYPE_CHOICES = (
     )    
 
 FITTING_CHOICES = (
-    ('fitting', 'fitting'),
+    ('X', 'choose fitting'),
     ( 'E27', 'E27'),
     ( 'E16', '16' ),
     ( 'GU10', 'GU10'),
+    ( 'T5', 'T5'),
     ( 'LED built in', 'LED built in')
     
     
@@ -34,7 +35,7 @@ FITTING_CHOICES = (
     
     
 COLOUR_CHOICE = (
-     ('X', 'colour'),
+     ('X', 'choose colour'),
      ( 'black','white','grey','red', 'yellow')   
     )    
 
