@@ -40,7 +40,7 @@
             <td>{{ item.product.name }}</td>    
             <td>{{ item.quantity}}</td>    
             <td>€{{ item.product.product.bruto_price }}</td>
-            <td>€{{ item.total}}</td>
+            <td>€{{ item.total}} excl. VAT</td>
             <td><form method="post" action="{% url 'remove_item' %}">
                 {% csrf_token %}
                 <input type="hidden" name="id" value="{{item.product.id}}"/>
