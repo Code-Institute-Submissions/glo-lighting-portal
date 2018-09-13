@@ -22,70 +22,70 @@
                     
                     <h4>€{{product.bruto_price}} ex. btw</h4>
                     {% if product.brand %}
-                    Brand:{{product.brand}}
-                    {% endif %}<br> 
+                    Brand:{{product.brand}}<br>
+                    {% endif %} 
                 
                     
                     {% if product.material %}
-                    Material:{{product.material}}
-                    {% endif %}<br>  
+                    Material:{{product.material}}<br>
+                    {% endif %}  
                     
                     {% if product.mains %}
-                    Mains:{{product.mains}}
-                    {% endif %}<br>
+                    Mains:{{product.mains}}<br>
+                    {% endif %}
                     
                     {% if product.height %}
-                    Shade height:{{product.height}}
-                    {% endif %}<br>
+                    Shade height:{{product.height}}<br>
+                    {% endif %}
                     
                     {% if product.width %}
-                    Shade width:{{product.width}}
-                    {% endif %}<br>
+                    Shade width:{{product.width}}<br>
+                    {% endif %}
                     
                     {% if product.diameter %}
-                    Shade ø:{{product.diameter}}
-                    {% endif %}<br>
+                    Shade ø:{{product.diameter}}<br>
+                    {% endif %}
                     
                     {% if product.color %}
-                    Colour:{{product.colour}}
-                    {% endif %}<br>
+                    Colour:{{product.colour}}<br>
+                    {% endif %}
                     
                     {% if product.fitting %}
-                    Fitting:{{product.fitting}}
-                    {% endif %}<br>
+                    Fitting:{{product.fitting}}<br>
+                    {% endif %}
                     
                     {% if product.bulb %}
-                    Bulb:{{product.bulb}} 
-                    {% endif %}<br>
+                    Bulb:{{product.bulb}}<br> 
+                    {% endif %}
                     
                     {% if product.kelvin %}
-                    Kelvin:{{product.kelvin}} 
-                    {% endif %}<br>
+                    Kelvin:{{product.kelvin}}<br> 
+                    {% endif %}
                     
                     {% if product.cri %}
-                    CRI:{{product.cri}} 
-                    {% endif %}<br>
+                    CRI:{{product.cri}}<br> 
+                    {% endif %}
                     
                     {% if product.lumens %}
-                    Lumens:{{product.lumens}} 
-                    {% endif %}<br>
+                    Lumens:{{product.lumens}}<br> 
+                    {% endif %}
                     
                     {% if product.energy %}
-                    Energy:{{energy_label}} 
-                    {% endif %}<br>
+                    Energy:{{energy_label}}<br> 
+                    {% endif %}
                     
                     {% if product.art_No %}
                     Art.No.{{product.art_No}}
-                    {% endif %}<br>
+                    {% endif %}<br><br>
 
                     {% if product.transformer_included %}
                     Transformer:{{product.transformer_included}}
-                    {% endif %}<br>
+                    {% endif %}
                     
                     {% if product.miscellaneous %}
                     {{product.miscellaneous}}
-                    {% endif %}
-                    <br>
+                    {% endif %}<br>
+                    
                     
                     {% for star in product.stars %}
                     <i class="fa fa-star"></i> {% endfor %} {% if product.needs_half_star %}
