@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404, HttpResponse
 from .models import Product
+from .models import Brand
 from .forms import ProductForm
 
 def filter_by_product_type(request,type):
@@ -19,7 +20,10 @@ def product_list(request):
 def product_detail(request, id):
     product = get_object_or_404(Product, pk=id)
     return render(request, "products/product_detail.html" , {'product': product})
-    
+  
+def logo_brand(request, id):
+    logo = get_object_or_404(Brand, pk=id)
+    return render(request, "templates/base.html" , {'logo': logo})    
     
 def add_product(request):
     return render(request, "products/product_form.html")
