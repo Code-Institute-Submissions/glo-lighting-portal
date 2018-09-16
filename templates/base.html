@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Glo-lighting</title>
-
   {% block head_style %}
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://bootswatch.com/3/sandstone/bootstrap.min.css">
@@ -24,6 +23,8 @@
 </head>
 
 <body>
+
+    
   <!-- Fixed masthead -->
   <nav class="navbar navbar-masthead navbar-default navbar-fixed-top">
     <div class="container">
@@ -62,9 +63,12 @@
           {% for message in messages %} {{ message }} {% endfor %}
         </div>
       </div>
-      {% endif %}
+     {% endif %}   
     </div>
   </div>
+
+  
+
 
   <div class="container">
     <div class="row">
@@ -102,7 +106,7 @@
 
 <div class="col-md-3 mb-md-0 mb-3">
 
-<h5 class="text-uppercase">Sellers</h5>
+<h5">Sellers</h5>
 
 <ul class="list-unstyled">
   {% for brand in brands %} {{ products.brand }} {% endfor %}
@@ -129,7 +133,6 @@
 
 </div>
 
-<div class="footer-social text-center py-6">    
 <div class="footer-social text-center ">    
 <a href="#" class="fa fa-facebook"></a>
 <a href="#" class="fa fa-twitter"></a>

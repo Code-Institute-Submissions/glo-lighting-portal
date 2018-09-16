@@ -1,0 +1,20 @@
+{% extends "base.html" %} 
+{% load bootstrap_tags %}
+
+
+{% block content %}
+
+
+<h1>Contactddd Us</h1>
+<div class="container-fluid">
+    <div class="row">
+        <form method="post"enctype="multipart/form-data">
+     {{ form | as_bootstrap }}      
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="form-actions">
+      <button type="submit">Send</button>
+    </div>
+</form>
+
+{% endblock content %}

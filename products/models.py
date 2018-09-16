@@ -56,7 +56,7 @@ class Product(models.Model):
     lumens= models.IntegerField(blank=True, null=True)
     energy_label = models.ImageField(upload_to="images" , null=True, blank=True)
     art_No= models.CharField(max_length=40, blank=False, null=False)
-    bruto_price= models.DecimalField(max_digits=6, decimal_places=2, blank=False, null=False)
+    bruto_price = models.DecimalField(max_digits=6, decimal_places=2, blank=False, null=False)
     transformer_included=models.BooleanField(default=True)
     product_type = models.CharField(max_length=15, blank=False, null=False, default='X', choices=LAMP_TYPE_CHOICES)
     miscellaneous = models.TextField(blank=True, null=True)

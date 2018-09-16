@@ -24,8 +24,10 @@ from cart import urls as cart_urls
 from checkout import urls as checkout_urls
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('sendemail.urls')),
     path('', product_list, name='home'),
     path('checkout/', include(checkout_urls)),
     path('cart/', include(cart_urls)),
