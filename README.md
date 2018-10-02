@@ -12,7 +12,7 @@ The Lighting brands/manufacturers/sellers can request an account upon  they
 will be able to login and upload their products.
 Glo Lighting offers services to assist clients with this.   
 
-The Ux experience
+<strong>The Ux experience</strong>
 A simple and clean cut user interface provides ease in finding decorative lamps
 designers will be able to create mood boards and also purchase lamps directley.
 
