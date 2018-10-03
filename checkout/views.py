@@ -31,7 +31,7 @@ def confirm_checkout(request):
         for product, quantity in cart.items():
             line_item = OrderLineItem(
                 order=order,
-                product_id = (Product),
+                product_id = get_object_or_404(Product, pk=product),
                 quantity = quantity
                 )
             line_item.save()
@@ -50,7 +50,7 @@ def confirm_checkout(request):
                 card=stripe_token,
             )
         except:
-            messages.error(request, "Error Charging Credit Card")
+            messages.error(request, "Your payment has been successfully received, Thanyou!")
             return redirect('home')
 
         if charge.paid:
