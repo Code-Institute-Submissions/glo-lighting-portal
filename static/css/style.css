@@ -87,7 +87,7 @@ a:active {
 .project_photo img{
     width: 160px;
     height:auto; 
-    display:block;
+    display:inline-block;
     border-radius: 10px;
     padding-top:10px;
     padding-left:3px;
