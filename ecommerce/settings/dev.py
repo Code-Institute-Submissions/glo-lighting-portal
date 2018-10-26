@@ -1,6 +1,6 @@
 from .base import *
 
-ALLOWED_HOSTS = ["lighting-portal-humancode.c9users.io", "https://glo-lighting.herokuapp.com/"]
+ALLOWED_HOSTS = ["lighting-portal-humancode.c9users.io", "https://glo-lighting.herokuapp.com"]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
