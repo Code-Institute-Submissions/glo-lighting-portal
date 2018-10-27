@@ -45,9 +45,8 @@
           <li><a href="{% url 'filter' 'table' %}">Table</a></li>
           <li><a href="{% url 'filter' 'wall-ceiling' %}">Wall/Ceiling</a></li>
           <li><a href="{% url 'filter' 'outside' %}">Outside</a></li>
-         
-          <li><a href="{% url 'view_cart' %}"><i class="fa fa-shopping-cart"></i> Cart                        
-                        <label class="badge badge-light">{{ number_of_items_in_cart }}</label></a>
+          <li><a href="{% url 'view_cart' %}">Cart<i class="fa fa-shopping-cart"></i>                         
+          <label class="badge badge-light">{{ number_of_items_in_cart }}</label></a>
           </li>
         </ul>
       </div>
