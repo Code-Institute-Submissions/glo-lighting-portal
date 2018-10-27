@@ -114,5 +114,43 @@ float:right;
     
 }
 
+.amazing_jumbo_pic{
+    position:relative;
+    height:400px;
+    margin-top:-50px;
+    margin-left: -33.33%;
+    margin-right: -33.33%;
+    margin-bottom:30px;
+    /*margin-left: calc(-100vw / 2 + 500px / 2);*/
+    /*margin-right: calc(-100vw / 2 + 500px / 2);*/
+    background-image: url(http://lighting-portal-humancode.c9users.io:8080/media/jumbo_pics/lzf-jumbo_pic.jpg);
+
+}
+
+.cart{
+    top:-20px;
+    margin-left:20px;
+    margin-top:-30px;
+
+    color:grey;
+}
+
+.filterBar{
+    height:40px;
+    margin-top:-30px;
+    margin-left: -33.33%;
+    margin-right: -33.33%;
+    margin-bottom:30px;
+    background-color:black;
+    /*margin-left: calc(-100vw / 2 + 500px / 2);*/
+    /*margin-right: calc(-100vw / 2 + 500px / 2);*/
+}
+
+
+.thumnails{
+    
+    background-color: red;
+    margin:none;
+}
 
 
