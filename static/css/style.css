@@ -97,6 +97,8 @@ a:active {
 
 .thumbnail ratings{
     top:20px;
+    border: 0px;
+    background-color:none;
 }
 
 .add-to-cart{
