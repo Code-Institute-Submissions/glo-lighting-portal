@@ -124,7 +124,8 @@ float:right;
     margin-bottom:30px;
     /*margin-left: calc(-100vw / 2 + 500px / 2);*/
     /*margin-right: calc(-100vw / 2 + 500px / 2);*/
-    background-image: url(http://lighting-portal-humancode.c9users.io:8080/media/jumbo_pics/lzf-jumbo_pic.jpg);
+    background-image: url("https://s3.eu-west-3.amazonaws.com/glo-lighting/media/jumbo_pics/lzf-jumbo_pic.jpg");
+    
 
 }
 
