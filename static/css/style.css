@@ -114,6 +114,7 @@ float:right;
     
 }
 
+
 .amazing_jumbo_pic{
     position:relative;
     height:400px;
@@ -151,6 +152,18 @@ float:right;
     
     background-color: red;
     margin:none;
+}
+
+.archititle{
+  text-align: center;
+  font-family: roboto;
+  letter-spacing: 3pt;
+  color: grey;
+  font-size: 4em;
+  display:block;
+  max-width: 600px;
+  
+    
 }
 
 

@@ -50,7 +50,7 @@ def confirm_checkout(request):
                 card=stripe_token,
             )
         except:
-            messages.error(request, "Your payment has been successfully received, Thanyou!")
+            messages.error(request, "Your payment has not been received, try again or contact your bank")
             return redirect('home')
 
         if charge.paid:

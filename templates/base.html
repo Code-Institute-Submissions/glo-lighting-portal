@@ -88,7 +88,7 @@
 <h5 class="text-uppercase"></h5>
 
 
-<img width="40px" height="200" class="card-img-top img-fluid" src="../media/images/logos/lzf.png" alt="">
+<img width="40px" height="200" class="card-img-top img-fluid" src="https://s3.eu-west-3.amazonaws.com/glo-lighting/media/jumbo_pics/lzf-jumbo_pic.jpg" alt="">
 
 </div>
 
@@ -112,8 +112,9 @@
 <ul class="list-unstyled">
   {% for brand in brands %} {{ products.brand }} {% endfor %}
   <li>
-    <a href="#!">if you are a manufacturer of a brand and would like to place your products on glo lightin please contact us</a> <br>sales@glolighting.nl
+    <a href="#" >if you are a manufacturer of a brand and would like to place your products on glo lightin please contact us<br>sales@glolighting.nl</a>
     {% if user.is_authenticated %}
+    
           <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a></li>
           <li><a href="{% url 'add_product' %}"><i class="fa fa-user-plus"></i>Add product</a></li>
 

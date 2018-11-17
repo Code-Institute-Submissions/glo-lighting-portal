@@ -33,6 +33,4 @@ urlpatterns = [
     path('cart/', include(cart_urls)),
     path('accounts/', include(accounts_urls)),
     path('products/', include(products_urls)),
-    
-    path('media/<path:path>', serve, {'document_root': settings.MEDIA_ROOT}),
 ]
