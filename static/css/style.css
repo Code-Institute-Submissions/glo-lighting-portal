@@ -98,7 +98,7 @@ a:active {
 .thumbnail {
     top:20px;
     border: 0px;
-    background-color:none;
+    background-color: white;
 }
 
 .add-to-cart{
