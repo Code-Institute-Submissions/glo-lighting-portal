@@ -101,8 +101,8 @@
                     {{product.miscellaneous}}<br>
                     {% endif %}<br>
                     
-                    <span class="text-warning"> </div>
-                <div class="col-xs-12 col-sm-4" style="background-color:blue;">
+                <span class="text-warning"> </div>
+                <div class="col-xs-12">
                     {% for product_image in product.images.all %}
                 <div class="project_container">    
                 <div class="project_photo"><img src="{{MEDIA_URL}}{{ product_image.image }}"></div></div>
