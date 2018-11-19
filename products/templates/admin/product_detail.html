@@ -1,23 +1,14 @@
 {% extends "base_detail.html" %} {% block content %}
 <div class="container-fluid">
-
     <div class="container">
-        
         <div class="row">  
          {% if user.is_authenticated %}
      <div class"edit_button">
      <a href="{% url 'edit_product' product.id %}" class="btn btn-success">Edit</a>
      </div>
      {% endif %}
-
-
-       
-
-
-
             <div class="row">        
-    <div class="col-xs-12 col-sm-4" style="background-color:white;">            <div class="col-xs-12 col-sm-4" style="background-color:white;">
-
+    <div class="col-xs-12 col-sm-4" style="background-color:white;"> <div class="col-xs-12 col-sm-4" style="background-color:white;">
                 <img width="400px" height="auto" class="card-img-top img-fluid" src="{{MEDIA_URL}}{{product.image}}" alt="">
 
             </div></div>
@@ -106,16 +97,14 @@
                     {% for product_image in product.images.all %}
                 <div class="project_photo"><img src="{{MEDIA_URL}}{{ product_image.image }}"></div>
                 {% endfor %}
-        </div>
-    </div>
+                </div>
+                </div>
                     
                     
-                    {% for star in product.stars %}
-                    <i class="fa fa-star"></i> {% endfor %} {% if product.needs_half_star %}
-                    <i class="fa fa-star-half"></i> {% endif %}</div>
+                    
 
         </div>
-  </div>
+      </div>
 </div>
 
 

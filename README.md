@@ -21,6 +21,13 @@ designers will be able to create mood boards and also purchase lamps directly.
 ## Existing Features
 Consumer can add products to their shopping cart and aquire them using the payment system 'Stripe' this is all made easy not having to login and only having to fill out Name and Address after clicking Checkout, the clients payment details will not be retained. If a consumer closes the browser window and comes back the next day, their shopping basket will not have forgotten the product detail in the shopping cart.
 
+username: Sandro
+password: lzfLamps69*^
+
+
+admin: Admin
+password:Lamps69*^
+
 ## Features left to implement
 In the future this website will expand to other catagories which will include other interior subjects: bathrooms, kitchens, floors, furniture, ceilings, curtains, wall paper, ceramics etc.
 
