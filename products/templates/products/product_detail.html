@@ -4,17 +4,14 @@
     <div class="container">
         
         <div class="row">  
-         {% if user.is_authenticated %}
+    {% if user.is_authenticated %}
      <div class"edit_button">
      <a href="{% url 'edit_product' product.id %}" class="btn btn-success">Edit</a>
+      {% else %}
+         
+ 
      </div>
      {% endif %}
-
-
-       
-
-
-
             <div class="row">        
     <div class="col-xs-12 col-sm-4" style="background-color:white;">            <div class="col-xs-12 col-sm-4" style="background-color:white;">
 
@@ -109,10 +106,7 @@
                 {% endfor %}
         </div>
     </div>
-                     {% for star in product.stars %}
-                    <i class="fa fa-star"></i> {% endfor %} {% if product.needs_half_star %}
-                    <i class="fa fa-star-half"></i> {% endif %}</div>
-
+                     
         </div>
   </div>
 </div>
