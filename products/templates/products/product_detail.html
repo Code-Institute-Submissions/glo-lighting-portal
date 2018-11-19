@@ -1,43 +1,46 @@
-{% extends "base_no_detail.html" %} {% block content %}
+{% extends "base_detail.html" %} {% block content %}
 <div class="container-fluid">
+
     <div class="container">
         
-            <div class="row">  
-                 {% if user.is_authenticated %}
-                <div class"edit_button">
-                    <a href="{% url 'edit_product' product.id %}" class="btn btn-success">Edit</a>
-                </div>
-            </div>     
-                 {% endif %}
+        <div class="row">  
+         {% if user.is_authenticated %}
+     <div class"edit_button">
+     <a href="{% url 'edit_product' product.id %}" class="btn btn-success">Edit</a>
+     </div>
+     {% endif %}
+
+
+       
+
+
+
             <div class="row">        
-                <div class="col-xs-12 col-sm-4" style="background-color:white;">
-                    <div class="col-xs-12 col-sm-4" style="background-color:white;">
-                        <img width="400px" height="auto" class="card-img-top img-fluid" src="{{MEDIA_URL}}{{product.image}}" alt="">
-                    </div>
-                </div>
-            </div>
-            
-            
-            <div class="col-xs-12 col-sm-6" style="background-color:white;">     
-                <div class="row">
-                    <div class="col-xs-12 col-sm-3-offset-1" >
-                        <div class="add-to-cart">
-                        <form action="{% url 'add_to_cart' %}" method="post">
-                        {% csrf_token %}
-                        <input type="hidden" name="id" value="{{product.id}}" />
-                        <p><input type="hidden" name="quantity" value="1" /></p>
-                        <p><input class="btn btn-success" type="submit" value="Add To Cart" /></p>
-                        </form> 
-                    </div>
-                </div>
-            </div>
-            
+    <div class="col-xs-12 col-sm-4" style="background-color:white;">            <div class="col-xs-12 col-sm-4" style="background-color:white;">
+
+                <img width="400px" height="auto" class="card-img-top img-fluid" src="{{MEDIA_URL}}{{product.image}}" alt="">
+
+            </div></div>
+    <div class="col-xs-12 col-sm-6" style="background-color:white;">     <div class="row">
+                <div class="col-xs-12 col-sm-3-offset-1" style="background-color:white;">
+                    <div class="add-to-cart">
+<form action="{% url 'add_to_cart' %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="id" value="{{product.id}}" />
+        <p><input type="hidden" name="quantity" value="1" /></p>
+        <p><input class="btn btn-success" type="submit" value="Add To Cart" /></p>
+    </form>
+    </div>
+                    
                     <h3 class="card-title">{{product.name}} <img width="400px" height="auto" class="card-img-top img-fluid" src="{{MEDIA_URL}}{{product.logo}}" alt="">
+                    
+                    
                     <h4>€{{product.bruto_price}} ex. btw</h4>
                     {% if product.brand %}
                     Brand:{{product.brand}}<br>
                     {% endif %} 
                 
+                    
                     {% if product.material %}
                     Material:{{product.material}}<br>
                     {% endif %}  
@@ -100,13 +103,20 @@
                     
                 <span class="text-warning"> </div>
                 <div class="col-xs-12">
-                        {% for product_image in product.images.all %}
-                    <div class="project_container">    
-                        <div class="project_photo"><img src="{{MEDIA_URL}}{{ product_image.image }}">
-                        {% endfor %}
-                    </div>
-                </div>
+                    {% for product_image in product.images.all %}
+                <div class="project_container">    
+                <div class="project_photo"><img src="{{MEDIA_URL}}{{ product_image.image }}"></div></div>
+                {% endfor %}
+        </div>
     </div>
+                     {% for star in product.stars %}
+                    <i class="fa fa-star"></i> {% endfor %} {% if product.needs_half_star %}
+                    <i class="fa fa-star-half"></i> {% endif %}</div>
+
+        </div>
+  </div>
 </div>
+
+
 
 {% endblock content %}
