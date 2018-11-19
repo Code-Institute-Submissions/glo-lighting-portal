@@ -83,6 +83,12 @@ a:active {
     color: gold;
 }
 
+.project_container{
+    max-width: 400px;
+    height:auto; 
+    display:block;
+    float: left;
+}
 
 .project_photo img{
     width: 160px;

@@ -102,15 +102,14 @@
                     {% endif %}<br>
                     
                     <span class="text-warning"> </div>
-                <div class="col-xs-12 col-sm-4" style="background-color:white;">
+                <div class="col-xs-12 col-sm-4" style="background-color:blue;">
                     {% for product_image in product.images.all %}
-                <div class="project_photo"><img src="{{MEDIA_URL}}{{ product_image.image }}"></div>
+                <div class="project_container">    
+                <div class="project_photo"><img src="{{MEDIA_URL}}{{ product_image.image }}"></div></div>
                 {% endfor %}
         </div>
     </div>
-                    
-                    
-                    {% for star in product.stars %}
+                     {% for star in product.stars %}
                     <i class="fa fa-star"></i> {% endfor %} {% if product.needs_half_star %}
                     <i class="fa fa-star-half"></i> {% endif %}</div>
 
