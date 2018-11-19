@@ -11,5 +11,5 @@ urlpatterns = [
     path('filter/<str:type>', filter_by_product_type , name='filter'),
     path('', project_list, name='project_list'),
     path('', logo_brand, name='logo_brand'),
-
+    
   ]
