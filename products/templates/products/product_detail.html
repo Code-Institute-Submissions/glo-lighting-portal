@@ -1,4 +1,4 @@
-{% extends "base_detail.html" %} {% block content %}
+{% extends "base_no_detail.html" %} {% block content %}
 <div class="container-fluid">
 
     <div class="container">
@@ -9,9 +9,9 @@
      <a href="{% url 'edit_product' product.id %}" class="btn btn-success">Edit</a>
       {% else %}
          
- 
+ <a href="{% url 'edit_product' product.id %}" class="btn btn-invisable">Edit</a>
      </div>
-     {% endif %}
+     {% endfor %}
             <div class="row">        
     <div class="col-xs-12 col-sm-4" style="background-color:white;">            <div class="col-xs-12 col-sm-4" style="background-color:white;">
 
