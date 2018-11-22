@@ -22,6 +22,7 @@ from products import urls as products_urls
 from products.views import product_list
 from cart import urls as cart_urls
 from checkout import urls as checkout_urls
+from sendemail import urls as sendemail_urls
 
 
 
@@ -33,5 +34,5 @@ urlpatterns = [
     path('cart/', include(cart_urls)),
     path('accounts/', include(accounts_urls)),
     path('products/', include(products_urls)),
-    path('email/', include(email_urls)),
+    path('sendemail/', include(sendemail_urls)),
 ]
