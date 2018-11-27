@@ -21,10 +21,7 @@ footer {
 footer a:hover {
             color: #efefef;
         }
-        
-        
-        
-/* social media */        
+ /* social media */        
         
 .fa {
   padding: 5px;
@@ -88,6 +85,7 @@ a:active {
 
 /*This is the container in product_detail.html page which holds extra product images */
 .project_container{
+    margin-top: 10px;
     max-width: 400px;
     height:auto; 
     display:block;

@@ -25,7 +25,7 @@
 
 <body>
   <!-- Fixed masthead -->
-  <nav class="navbar navbar-masthead navbar-default navbar-fixed-top">
+<nav class="navbar navbar-masthead navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -37,49 +37,36 @@
         <a class="navbar-brand" href="/">GLO Lighting</a>
       </div>
 
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="{% url 'project_list' %}">Home</a></li>
-          <li><a href="{% url 'filter' 'suspension' %}">Suspension</a></li>
-          <li><a href="{% url 'filter' 'floor' %}">Floor</a></li>
-          <li><a href="{% url 'filter' 'table' %}">Table</a></li>
-          <li><a href="{% url 'filter' 'wall-ceiling' %}">Wall/Ceiling</a></li>
-          <li><a href="{% url 'filter' 'outside' %}">Outside</a></li>
-          <li><a href="{% url 'view_cart' %}">Cart&nbsp;<div class="cart"><i class="fa fa-shopping-cart"></div></i>                         
-          <label class="badge badge-light">{{ number_of_items_in_cart }}</label></a>
-          </li>
-        </ul>
-      </div>
+      
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="{% url 'project_list' %}">Home</a></li>
+                <li><a href="{% url 'filter' 'suspension' %}">Suspension</a></li>
+                <li><a href="{% url 'filter' 'floor' %}">Floor</a></li>
+                <li><a href="{% url 'filter' 'table' %}">Table</a></li>
+                <li><a href="{% url 'filter' 'wall-ceiling' %}">Wall/Ceiling</a></li>
+                <li><a href="{% url 'filter' 'outside' %}">Outside</a></li>
+                <li><a href="{% url 'view_cart' %}"><i class="fa fa-shopping-cart cart"></i> </a>
+              </ul>
+       </div>
     </div>
-  </nav>
+</nav>
 
   <div class="container">
     <div class="row">
-      {% if messages %}
+          {% if messages %}
       <div class="alert alert-success">
         <div class="messages">
           {% for message in messages %} {{ message }} {% endfor %}
         </div>
       </div>
-      {% endif %}
+          {% endif %}
     </div>
   </div>
+          {% block content %} {% endblock %}
+</div>
+</div>
 
-
-      {% block content %} {% endblock %}
-    </div>
-  </div>
- 
-  
-
-
-
-       
-
-  <!-- Footer -->
-            <script src="js/jquery.min.js"></script>
-            <!-- Kompresovan JavaScript fajl -->
-            <script src="js/bootstrap.min.js"></script>
 
 </body>
 

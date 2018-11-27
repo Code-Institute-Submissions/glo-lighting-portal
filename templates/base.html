@@ -1,7 +1,6 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,15 +17,13 @@
   <link href="https://fonts.googleapis.com/css?family=Orbitron:400,500" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
   {% endblock head_style %} {% block head_js %}
-
-
   {% endblock head_js %}
 </head>
 
 <body>
 
     
-  <!-- Fixed masthead -->
+  <!-- Fixed navigation-->
   <nav class="navbar navbar-masthead navbar-default navbar-fixed-top">
       <div class="container">
           <div class="navbar-header">
@@ -49,7 +46,7 @@
                 <li><a href="{% url 'filter' 'outside' %}">Outside</a></li>
                 <li><a href="{% url 'view_cart' %}"><i class="fa fa-shopping-cart cart"></i> </a>
               </ul>
-          </div>
+            </div>
       </div>
   </nav>
   <div class="container">
@@ -65,20 +62,20 @@
   </div>
   <div class="container">
     <div class="row">
-      {% block content %} {% endblock %}
+      {% block content %}<!-- page content is injected here --> {% endblock %}
     </div>
   </div>
 <footer class="page-footer font-small blue pt-4">
-        <!-- Grid column -->
+        <!-- future Content goes here -->
 <div class="col-md-6 mt-md-0 mt-3">
-         <!-- Content -->
+         <!-- future Content goes here-->
 </div>
 <div class="col-md-3 mb-md-0 mb-3">
 </div>
 <div class="col-md-3 mb-md-0 mb-3">
       <h5>Sellers</h5>
         <ul class="list-unstyled">
-            <li><a href="{% url 'email' %}" >if you are a manufacturer of a brand and would like to place your products on glo lightin please contact us<br>sales@glolighting.nl</a>
+            <li><a href="{% url 'email' %}" >if you are a manufacturer of a brand and would like to place your products on glo lighting please contact us<br>sales@glolighting.nl</a>
                 {% if user.is_authenticated %}
             <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a></li>
             <li><a href="{% url 'add_product' %}"><i class="fa fa-user-plus"></i>Add product</a></li>
@@ -98,7 +95,7 @@
 
 </footer>
   <!-- Footer -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             
 </body>
 

@@ -11,7 +11,7 @@ The user can see the retail prices displayed. however according to the users pro
 The Lighting brands/manufacturers/sellers can request an account with which they
 will be able to login to upload their product images and all other relavent infos related to the product. 
 The company Glo Lighting offers a service to clients who do not accomadate the skills to do this,
-Depending on the ammount of work envolved in publishing the clients product an extra fee will be charge accordingly. 
+Depending on the ammount of work envolved in publishing the clients product an extra fee will be charged accordingly. 
 
 ## The Ux experience
 A simple and clean cut user interface provides ease in finding decorative lamps
@@ -119,29 +119,30 @@ so you will need to un comment out the following:
 #### TESTING:
 <a href="https://gowild.nl/glolighting/tests.html" >Click here to see W3 tests carried out</a>
 The Django framework has it's own built in automated test system, 
-Each test can be found inside the app directories in tests.py files. 
-In order to run tests cd your way to the directory you want to test.
-Type "python3 tests.py" in the cli, this will run the test in the file.
+Each test can be found inside the app directories in tests.py. 
+In order to run tests, cd your way to the app directory in which your test.py exists.
+Type "python3 tests.py" in the cli and this will run the test.
+At present there have been no automated written.
 
 
-##Apps included with this project
+#### Apps included with this project
 
 Home
 The Home App renders the index.html template, which in turn calls the base.html template to present a full webpage with navbar, content and footer.
 
-#accounts
+#### accounts
 This app outlines the permissions of each manufacturer to a brand 
 there is a one to many relationship between brand and maufacturer
 
-#cart
+#### cart
 The cart app shows us what we have in the cart including quantity
 and a total ammount and from here we can check out
 
-#checkout
+#### checkout
 As the title says this app allows us to fill in our name address and credit card
 so that we can pay for the goods.
 
-#products
+#### products
 In this app there are two templates which contain image and text data firstly
 just the image of the product with no name or price.
 #sendmail
@@ -154,7 +155,7 @@ The views.py holds the data formatted within a html cms presentation.
  
 appears inbetween the block tags in the files which reside in the templates directory.
 
-**Credits
+#### Credits
 Many thanks to Code Instutute in partular Brian, Katie, Matt, Richard, not forgetting the backup team who who were there after the course ended to help us on our way to finding solutions in solving code problems not least my wife for having to put up with me spending long silent hours hidden behind my laptop blocking out the rest of the world.
 
 The content material comes from Lzf the prices and information is fictitious.
