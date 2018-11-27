@@ -117,9 +117,11 @@ so you will need to un comment out the following:
 
 
 #### TESTING:
-<a href="https://gowild.nl/glolighting/tests.html" >Click here to see tests carried out</a>
-
-
+<a href="https://gowild.nl/glolighting/tests.html" >Click here to see W3 tests carried out</a>
+The Django framework has it's own built in automated test system, 
+Each test can be found inside the app directories in tests.py files. 
+In order to run tests cd your way to the directory you want to test.
+Type "python3 tests.py" in the cli, this will run the test in the file.
 
 
 ##Apps included with this project
@@ -153,9 +155,9 @@ The views.py holds the data formatted within a html cms presentation.
 appears inbetween the block tags in the files which reside in the templates directory.
 
 **Credits
-Many thanks to Code Instutute in partular Brian, Katie, Matt, Richard, not forgetting the backup team who who were there after the course ended to help us on our way to finding solutions in solving code problems and last but not least my wife for having to put up with me spending long silent hours hidden behind my laptop blocking out the rest of the world.
+Many thanks to Code Instutute in partular Brian, Katie, Matt, Richard, not forgetting the backup team who who were there after the course ended to help us on our way to finding solutions in solving code problems not least my wife for having to put up with me spending long silent hours hidden behind my laptop blocking out the rest of the world.
 
-The content material comes from Lzf the prices and information may not be completely accurate.
+The content material comes from Lzf the prices and information is fictitious.
 
 The concept of this website was inspired by architonic.com
 
