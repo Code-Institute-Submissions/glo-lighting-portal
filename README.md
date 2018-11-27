@@ -3,8 +3,8 @@ See demo: https://glo-lighting.herokuapp.com/
 
 Glolighting is a service providing a show case for the best lighting brands from all around the world. 
 The site is specifically built to facilitate the needs of interieur architects and designers
-looking to find amazing lamps for high-end projects such as hotels restaurants hospitals schools public buildings etc.
-The user/designer/consumer should be able to browse easily and find image material to compile mood baords for client presentations. 
+looking to find amazing lamps for high-end projects such as hotels restaurants hospitals schools public buildings etc. The initial images of the products contain no name and price so that the designer is not swayed or distracted into choosing price above design. The designer must first fall in love with the product
+The user/designer/consumer should be able to browse easily and find image material to compile mood boards for client presentations. 
 The user can see the retail prices displayed. however according to the users profession will be awarded varius discounts for each brand. 
 
 ## Brands
@@ -112,32 +112,13 @@ when ever you push to Github from your lopcal directory it will automatically pu
 22. If you want to run the app locally you will need to use the CLI command "python3 manage.py run" without the "" however it will still be pulling the data from your Heroku database and AWS-services
 so you will need to un comment out the following:
 
-# STATIC_URL = '/static/'
-# MEDIA_URL = '/media/'
+#### STATIC_URL = '/static/'
+#### MEDIA_URL = '/media/'
 
 
-TESTING:
-The Checkout form has been manually checked.
-If user does not fill in the fields he or she will be prompted to do so.
-The email form recognizes if the email is correctly filled in.
---------------------------------------
-Can a manufacturer edit his products.
-Correct outcome YES
---------------------------------------
-Can a maufacturer edit another brand which is not his own
-in correct outcome YES.
-if out come is YES This can be fixed
---------------------------------------
-Does contact work correctly.
-Correct outcome YES.
---------------------------------------
-Can product be entered without all fields being entered
-Correct outcome YES.
---------------------------------------
-If product has no Article ref. and Price can it still be pulished.
-Correct outcome NO.
---------------------------------------
-Forgotten email address sent to user:
+#### TESTING:
+<a href="https://gowild.nl/glolighting/tests.html" >Click here to see tests carried out</a>
+
 
 
 
@@ -172,8 +153,7 @@ The views.py holds the data formatted within a html cms presentation.
 appears inbetween the block tags in the files which reside in the templates directory.
 
 **Credits
-Many thanks to Code Instutute in partular Brian, Katie, Matt, Richard, not forgetting the backup team who who were there after the course ended to help us on our way to finding solutions in solving code problems and last but not least my wife for having to put up with me with my late friday night
-fellow student drinking sessions with Stein, Daan, Katie, Gijs, Dimitar and Gi.
+Many thanks to Code Instutute in partular Brian, Katie, Matt, Richard, not forgetting the backup team who who were there after the course ended to help us on our way to finding solutions in solving code problems and last but not least my wife for having to put up with me spending long silent hours hidden behind my laptop blocking out the rest of the world.
 
 The content material comes from Lzf the prices and information may not be completely accurate.
 
