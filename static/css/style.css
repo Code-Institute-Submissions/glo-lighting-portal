@@ -10,28 +10,28 @@ footer {
     border-top: 1px solid #ededed;
     color: white;
     background-color: #3e3f3a;
-    
 }
 
- footer a {
-            color: lightgrey;
-        }
+footer a {
+    color: lightgrey;
+}
 
 
 footer a:hover {
-            color: #efefef;
-        }
+    color: #efefef;
+}
+
  /* social media */        
         
 .fa {
-  padding: 5px;
-  font-size: 30px;
-  width: 40px;
-  height:40px;
-  text-align: center;
-  text-decoration: none;
-  margin: 0px 20px;
-  border-radius: 50%;
+    padding: 5px;
+    font-size: 30px;
+    width: 40px;
+    height:40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0px 20px;
+    border-radius: 50%;
 }
 
 .fa:hover {
@@ -39,23 +39,19 @@ footer a:hover {
 }
 
 .fa-facebook  {
-  
-  color: white;
+    color: white;
 }
 
 .fa-twitter {
-  
-  color: white;
+    color: white;
 }
 
 .fa-youtube {
- 
-  color: white;
+    color: white;
 }
 
 .fa-instagram {
-  
-  color: white;
+    color: white;
 }
 
 .accountform {
@@ -104,21 +100,16 @@ a:active {
 }
 
 .add-to-cart{
-float:right;
+    float:right;
 }
 
 .edit_button btn btn-success{
-    
-  float:right; 
-  display:hidden;
-  
-  
-    
+    float:right; 
+    display:hidden;
 }
 
 .navbar-brand{
-  font-family: 'Orbitron', sans-serif;  
-    
+     font-family: 'Orbitron', sans-serif;  
 } 
 
 /*The large static header image at the top
@@ -132,8 +123,6 @@ In the future this will be different for each category */
     margin-right: -33.33%;
     margin-bottom:30px;
     background-image: url("https://s3.eu-west-3.amazonaws.com/glo-lighting/media/jumbo_pics/lzf-jumbo_pic.jpg");
-    
-
 }
 
 .cart{
@@ -146,24 +135,17 @@ In the future this will be different for each category */
 /* this the grey band under the large static header image
 In the future it will be used to house different filers for each category*/
 
-.filterBar{
+.filter-bar{
     height:40px;
     margin-top:-30px;
     margin-left: -33.33%;
     margin-right: -33.33%;
     margin-bottom:30px;
     background-color:#3e3f3a;
-    
- 
 }
-
-
-
 
 .btn-invisable{
    display:hidden; 
-    
-    
 }
 
 
