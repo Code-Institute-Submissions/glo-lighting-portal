@@ -2,7 +2,13 @@
 
 <div class="row amazing_jumbo_pic">
 </div>
-<div class="filter-bar"></div>
+<div class="filter-bar">
+    {% if messages %}
+
+          {% for message in messages %} {{ message }} {% endfor %}
+
+     {% endif %}   
+</div>
 <div class="container-fluid">
     <div class="row">
         {% for product in products %}

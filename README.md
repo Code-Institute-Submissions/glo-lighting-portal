@@ -1,15 +1,38 @@
 # GloLighting
 See demo: https://glo-lighting.herokuapp.com/
 
-Glolighting is a service providing a show case for the best lighting brands from all around the world. 
+Glolighting is a service providing a show case for the ***best lighting brands from all around the world.*** 
 The site is specifically built to facilitate the needs of interieur architects and designers
-looking to find amazing lamps for high-end projects such as hotels restaurants hospitals schools public buildings etc. The initial images of the products contain no name and price so that the designer is not swayed or distracted into choosing price above design. The designer must first fall in love with the product
+looking to find amazing lamps for high-end projects such as hotels restaurants hospitals schools public buildings etc. The landing pages display images of the products containing no name or price so that the designer is not swayed or distracted into choosing price above design. The designer must first fall in love with the product.
 The user/designer/consumer should be able to browse easily and find image material to compile mood boards for client presentations. 
-The user can see the retail prices displayed. however according to the users profession will be awarded varius discounts for each brand. 
+The price for each lamp is displayed after the user clicks on a lamp. Retail prices are displayed,
+however according to the users profession will be awarded various discounts for each brand.
 
-## Brands
-The Lighting brands/manufacturers/sellers can request an account with which they
-will be able to login to upload their product images and all other relavent infos related to the product. 
+Architects and interior architects can register their projects and recieve commission.
+
+### Discount:
+
+1. Architects max 10-20%
+2. Interior architects max 10-50%
+3. Instillators/electricions max 20-30%
+4. Retailers max 10-50%
+5. Consumers max 10%
+
+Apply for discount form 
+
+## Lighting Brands/Manufactures
+
+The Lighting manufacturers/sellers can request a seller account. The admin will register them under the name of their brand after a contract has been signed and invoice paid. 
+
+admin: Admin
+password:Lamps69*^
+
+A user name & password will then be forwarded to the new owner of the account. 
+The seller will then be able to login write and edit text and product photos.
+
+username: Sandro
+password: lzfLamps69*^
+
 The company Glo Lighting offers a service to clients who do not accomadate the skills to do this,
 Depending on the ammount of work envolved in publishing the clients product an extra fee will be charged accordingly. 
 
@@ -17,16 +40,8 @@ Depending on the ammount of work envolved in publishing the clients product an e
 A simple and clean cut user interface provides ease in finding decorative lamps
 designers will be able to create mood boards and also purchase lamps directly.
 
-
 ## Existing Features
 Consumer can add products to their shopping cart and aquire them using the payment system 'Stripe' this is all made easy not having to login and only having to fill out Name and Address after clicking Checkout, the clients payment details will not be retained. If a consumer closes the browser window and comes back the next day, their shopping basket will not have forgotten the product detail in the shopping cart.
-
-username: Sandro
-password: lzfLamps69*^
-
-
-admin: Admin
-password:Lamps69*^
 
 ## Features left to implement
 In the future this website will expand to other catagories which will include other interior subjects: bathrooms, kitchens, floors, furniture, ceilings, curtains, wall paper, ceramics etc.
@@ -50,6 +65,7 @@ At one point there was a bug in the deployed version, the checkout was returning
 Other problems encountered were the type of error message returned when a user tried
 to create a product without being logged in.
 
+
 ## Deployment.
 1. Clone or download github version
 2. Register and login to AWS services account: https://s3.console.aws.amazon.com/s3/
@@ -66,12 +82,12 @@ to create a product without being logged in.
 
 9. Go back to Heroku https://dashboard.heroku.com/apps, open dashboard and then db.
 10. Click on settings then on 'Reveal Config Vars' button. You can then copy the database url.
-11.Go back to your local CLI and type sudo pip3 install dj_database_url
-12.In CLI type the following pip3 install -r requirements.txt   ...this will install all dependencies
-13.Inside top level file: bash.rc line 71 paiste your db url inbetween the ''.
-14.Paiste in your AWS Keys in lines 66 to 68
-15.Paiste in line 63 "ecommerce.settings.dev" without the quotes.
-16.Paiste in lines 57 & 58 your stripe keys.
+11. Go back to your local CLI and type sudo pip3 install dj_database_url
+12. In CLI type the following pip3 install -r requirements.txt   ...this will install all dependencies
+13. Inside top level file: bash.rc line 71 paiste your db url inbetween the ''.
+14. Paiste in your AWS Keys in lines 66 to 68
+15. Paiste in line 63 "ecommerce.settings.dev" without the quotes.
+16. Paiste in lines 57 & 58 your stripe keys.
 
 ```
 export STRIPE_PUBLISHABLE_KEY=''
@@ -90,7 +106,7 @@ export DATABASE_URL="postgres://itpqvhstgtdkua:53ea12f0aa7ce5f20e4eae4512742a23c
 
 17. Ensure that you have all of the above keys copied and paisted into the "Config Vars" in Heroku.
 18. Whilst inside Heroku, go to menu item "deployment" and click on the github icon then specify your github repository using the search button, once this is included
-when ever you push to Github from your lopcal directory it will automatically push to Heroku. Use the following CLI commands:
+when ever you push to Github from your local directory it will automatically push to Heroku. Use the following CLI commands:
     git status
     git add .
     git commit -m "The final push"
@@ -120,9 +136,9 @@ so you will need to un comment out the following:
 <a href="https://gowild.nl/glolighting/tests.html" >Click here to see W3 tests carried out</a>
 The Django framework has it's own built in automated test system, 
 Each test can be found inside the app directories in tests.py. 
-In order to run tests, cd your way to the app directory in which your test.py exists.
-Type "python3 tests.py" in the cli and this will run the test.
-At present there have been no automated written.
+In order to run tests, 
+Install and activate virtualenv before typing the following command "python3 manage.py accounts" this should run the tests for the accounts app.
+Repeat this for other apps replacing the name of the after "python3 manage.py _______".
 
 
 #### Apps included with this project
@@ -147,16 +163,15 @@ In this app there are two templates which contain image and text data firstly
 just the image of the product with no name or price.
 #sendmail
 
-Each app has a url.py file which is linked into the central nervous system of Django
+Each app has an url.py file which is linked into the central nervous system of Django
 in the ecommerce/settings/urls.py file.
 in each app there is also a models.py and views.py file.
-The models.py defines the field structure in the sqlite database, when ever we do a makemigration command any nieuw field will be added to the database.
-The views.py holds the data formatted within a html cms presentation.
- 
-appears inbetween the block tags in the files which reside in the templates directory.
+The models.py defines the field structure in the postgres database, when ever we do a makemigration command any nieuw field will be added to the database.
+The views.py holds the functions which are the  presentation.
+The content appears inbetween the block tags in the files which reside in the templates directory.
 
 #### Credits
-Many thanks to Code Instutute in partular Brian, Katie, Matt, Richard, not forgetting the backup team who who were there after the course ended to help us on our way to finding solutions in solving code problems not least my wife for having to put up with me spending long silent hours hidden behind my laptop blocking out the rest of the world.
+Many thanks to Code Institute in particular Brian, Katie, Matt, Richard, not forgetting the backup team who were there after the course available to coach us into solving code problems not least thankyou to my wife for having to put up with me spending long hours hidden behind the laptop night after night.
 
 The content material comes from Lzf the prices and information is fictitious.
 

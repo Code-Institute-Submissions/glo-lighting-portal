@@ -8,24 +8,16 @@
                 <div class="caption">
                     <h4 class="pull-right">€{{product.bruto_price}}</h4>
                     <h4>{{product.name}}</h4>
-                              <div class="ratings">
-                    <p class="pull-right">{{product.reviews_received.all|length}} reviews</p>
-                    <br>
                 </div>
-
-                        {% for star in product.stars %}
-                        <i class="fa fa-star"></i> {% endfor %} {% if product.needs_half_star %}
-                        <i class="fa fa-star-half"></i> {% endif %}
-
                     </p>
                 </div>
             </div>
         </div>
         {% if forloop.counter|divisibleby:3 %}
     </div>
-    <div class="row">
+ 
         {% endif %} {% endfor %}
-    </div>
+    
 </div>
 
 {% endblock content %}

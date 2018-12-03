@@ -3,19 +3,22 @@
     <div class="container">
         <div class="row">  
          {% if user.is_authenticated %}
-     <div class"edit_button">
-     <a href="{% url 'edit_product' product.id %}" class="btn btn-success">Edit</a>
-     </div>
-     {% endif %}
+             <div class"edit_button">
+             <a href="{% url 'edit_product' product.id %}" class="btn btn-success">Edit</a>
+             </div>
+         {% endif %}
             <div class="row">        
-    <div class="col-xs-12 col-sm-4" style="background-color:white;"> <div class="col-xs-12 col-sm-4" style="background-color:white;">
-                <img width="400px" height="auto" class="card-img-top img-fluid" src="{{MEDIA_URL}}{{product.image}}" alt="">
-
-            </div></div>
-    <div class="col-xs-12 col-sm-6" style="background-color:white;">     <div class="row">
+                <div class="col-xs-12 col-sm-4" style="background-color:white;"> 
+                    <div class="col-xs-12 col-sm-4" style="background-color:white;">
+                        <img width="400px" height="auto" class="card-img-top img-fluid" src="{{MEDIA_URL}}{{product.image}}" alt="">
+                    </div>
+                </div>
+        
+        <div class="col-xs-12 col-sm-6" style="background-color:white;">    
+            <div class="row">
                 <div class="col-xs-12 col-sm-3-offset-1" style="background-color:white;">
-                    <div class="add-to-cart">
-<form action="{% url 'add_to_cart' %}" method="post">
+            <div class="add-to-cart">
+    <form action="{% url 'add_to_cart' %}" method="post">
         {% csrf_token %}
         <input type="hidden" name="id" value="{{product.id}}" />
         <p><input type="hidden" name="quantity" value="1" /></p>
@@ -23,7 +26,7 @@
     </form>
     </div>
                     
-                    <h3 class="card-title">{{product.name}} <img width="400px" height="auto" class="card-img-top img-fluid" src="{{MEDIA_URL}}{{product.logo}}" alt="">
+                    <h3 class="card-title">{{product.name}} <img  class="card-img-top img-fluid" src="{{MEDIA_URL}}{{product.logo}}" width="400px"  alt="{{product.name}}"  >
                     
                     
                     <h4>€{{product.bruto_price}} ex. btw</h4>
@@ -99,11 +102,8 @@
                 {% endfor %}
                 </div>
                 </div>
-                    
-                    
-                    
 
-        </div>
+            </div>
       </div>
 </div>
 

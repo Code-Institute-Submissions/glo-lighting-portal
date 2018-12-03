@@ -16,7 +16,6 @@ footer a {
     color: lightgrey;
 }
 
-
 footer a:hover {
     color: #efefef;
 }
@@ -57,7 +56,6 @@ footer a:hover {
 .accountform {
     padding-top: 20px;
 }
-
 
  unvisited link 
 a:link {
@@ -116,9 +114,10 @@ a:active {
 In the future this will be different for each category */
 
 .amazing_jumbo_pic{
-    position:relative;
+    z-index:-100;
+    position:static;
     height:400px;
-    margin-top:-50px;
+    margin-top:-60px;
     margin-left: -33.33%;
     margin-right: -33.33%;
     margin-bottom:30px;
@@ -148,4 +147,13 @@ In the future it will be used to house different filers for each category*/
    display:hidden; 
 }
 
+.alert-success{
+top:-30px;
+z-index:200;
+background-color:#a89b59;
+}
+
+btn hover{
+    background-color: #a89b59;
+}
 

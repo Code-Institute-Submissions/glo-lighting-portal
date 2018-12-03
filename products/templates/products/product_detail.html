@@ -24,7 +24,7 @@
                 <p><input class="btn btn-success" type="submit" value="Add To Cart" /></p>
             </form>
         </div>
-<h3 class="card-title">{{product.name}} <img width="400px" height="auto" class="card-img-top img-fluid" src="{{MEDIA_URL}}{{product.logo}}" alt="">
+<h3 class="card-title">{{product.name}} <img class="card-img-top img-fluid" src="{{MEDIA_URL}}{{product.logo}}" width="400px" height="auto"  alt="{{product.name}}" />
                     
                     <h4>€{{product.bruto_price}} ex. btw</h4>
                     {% if product.brand %}
@@ -93,14 +93,7 @@
                     {% for product_image in product.images.all %}
                 <div class="project_container">    
                 <div class="project_photo"><a data-fancybox="gallery" href="{{MEDIA_URL}}{{ product_image.image }}"><img src="{{MEDIA_URL}}{{ product_image.image }}" width="180px"></a></div></div>
-                
-                     
-    
-
-                
-                
-                
-                
+ 
                 {% endfor %}
                 </div>
                 </div>
