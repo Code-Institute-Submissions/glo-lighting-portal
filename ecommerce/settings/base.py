@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'checkout',
     'sendemail',
     'articles',
+    'blog_accounts',
     
     
 ]
