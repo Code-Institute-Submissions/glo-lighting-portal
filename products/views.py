@@ -23,7 +23,7 @@ def product_detail(request, id):
   
 def logo_brand(request, id):
     logo = get_object_or_404(Brand, pk=id)
-    return render(request, "templates/base.html" , {'logo': logo})    
+    return render(request, "templates/base.html" , {'logo':logo} , {'brand':brand})    
     
 def add_product(request):
     return render(request, "products/product_form.html")

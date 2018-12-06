@@ -44,23 +44,44 @@
                 <li><a href="{% url 'filter' 'table' %}">Table</a></li>
                 <li><a href="{% url 'filter' 'wall-ceiling' %}">Wall/Ceiling</a></li>
                 <li><a href="{% url 'filter' 'outside' %}">Outside</a></li>
+                <li><a href="{% url 'filter' 'articles' %}">articles</a></li>
+                 
+
                 <li><a href="{% url 'view_cart' %}"><i class="fa fa-shopping-cart cart"></i> </a>
               </ul>
             </div>
       </div>
   </nav>
->
+
   <div class="container">
     <div class="row">
       {% block content %}<!-- page content is injected here --> {% endblock %}
     </div>
   </div>
+  
+ 
+  
 <footer class="page-footer font-small blue pt-4">
         <!-- future Content goes here -->
-<div class="col-md-6 mt-md-0 mt-3">
-         <!-- future Content goes here-->
+        
+<div class="col-md-6 ">
+  <div class="col-md-3 mb-md-0 mb-3">
+      <h5><a href="{% url 'register' %}">Bloggers register here</a></h5>
+      <h5><a href="{% url 'login' %}">Login here</a></h5>
+        <ul class="list-unstyled">
+            <li>
+                {% if user.is_authenticated %}
+            <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a></li>
+                {% else %}
+            <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Log In</a></li>
+                {% endif %}
+        </ul>
 </div>
-<div class="col-md-3 mb-md-0 mb-3">
+
+
+<!-- future Content goes here-->
+</div>
+<div class="col-md-3 mb-md-0 mb-3"> 
 </div>
 
 <div class="col-md-3 mb-md-0 mb-3">
