@@ -2,7 +2,7 @@
 <div class="container-fluid">
     <div class="container">
         <div class="row">  
-         {% if user.is_authenticated %}
+         {% if user.brand %}
          <div class"edit_button">
          <a href="{% url 'edit_product' product.id %}" class="btn btn-success">Edit</a>
          </div>
@@ -10,7 +10,7 @@
            <div class="row">        
                 <div class="col-xs-12 col-sm-4" style="background-color:white;">            
                 <div class="col-xs-12 col-sm-4" style="background-color:white;">
-                <img width="400px" height="auto" class="card-img-top img-fluid" src="{{MEDIA_URL}}{{product.image}}" alt="">
+                <img  class="card-img-top img-fluid" src="{{MEDIA_URL}}{{product.image}}" alt="" width="400px" height="auto" >
             </div>
           </div>
         <div class="col-xs-12 col-sm-6" style="background-color:white;">     
@@ -24,75 +24,79 @@
                 <p><input class="btn btn-success" type="submit" value="Add To Cart" /></p>
             </form>
         </div>
-<h3 class="card-title">{{product.name}} <img class="card-img-top img-fluid"  width="400px" height="auto"  alt="{{product.name}}" />
+        <img width="60px" height="auto" class="brand" src="{{MEDIA_URL}}logos/{{product.brand}}.png" alt="">
+<h3 class="card-title">{{product.name}}</3>
                     
                     <h4>€{{product.bruto_price}} ex. btw</h4>
                     {% if product.brand %}
-                    Brand:{{product.brand}}<br>
+                    Brand:{{product.brand}}<br/>
                     {% endif %} 
                 
                     
                     {% if product.material %}
-                    Material:{{product.material}}<br>
+                    Material:{{product.material}}<br/>
                     {% endif %}  
                     
                     {% if product.mains %}
-                    Mains:{{product.mains}}<br>
+                    Mains:{{product.mains}}<br/>
                     {% endif %}
                     
                     {% if product.height %}
-                    Shade height:{{product.height}}<br>
+                    Shade height:{{product.height}}<br/>
                     {% endif %}
                     
                     {% if product.width %}
-                    Shade width:{{product.width}}<br>
+                    Shade width:{{product.width}}<br/>
                     {% endif %}
                     
                     {% if product.diameter %}
-                    Shade ø:{{product.diameter}}<br>
+                    Shade ø:{{product.diameter}}<br/>
                     {% endif %}
                     
                     {% if product.color %}
-                    Colour:{{product.colour}}<br>
+                    Colour:{{product.colour}}<br/>
                     {% endif %}
                     
                     {% if product.fitting %}
-                    Fitting:{{product.fitting}}<br>
+                    Fitting:{{product.fitting}}<br/>
                     {% endif %}
                     
                     {% if product.bulb %}
-                    Bulb:{{product.bulb}}<br> 
+                    Bulb:{{product.bulb}}<br/> 
                     {% endif %}
                     
                     {% if product.kelvin %}
-                    Kelvin:{{product.kelvin}}<br> 
+                    Kelvin:{{product.kelvin}}<br/> 
                     {% endif %}
                     
                     {% if product.cri %}
-                    CRI:{{product.cri}}<br> 
+                    CRI:{{product.cri}}<br/> 
                     {% endif %}
                     
                     {% if product.lumens %}
-                    Lumens:{{product.lumens}}<br> 
+                    Lumens:{{product.lumens}}<br/> 
                     {% endif %}
                     
                     {% if product.energy %}
-                    Energy:{{energy_label}}<br> 
+                    Energy:{{energy_label}}<br/> 
                     {% endif %}
                     
                     {% if product.art_No %}
-                    Art.No.{{product.art_No}}<br>
+                    Art.No.{{product.art_No}}<br/>
                     {% endif %}
 
                     {% if product.miscellaneous %}
-                    {{product.miscellaneous}}<br>
-                    {% endif %}<br>
+                    <br/>
+                    {{product.miscellaneous}}<br/>
+                    {% endif %}<br/>
                     
                 <span class="text-warning"> </div>
                 <div class="col-xs-12">
                     {% for product_image in product.images.all %}
                 <div class="project_container">    
-                <div class="project_photo"><a data-fancybox="gallery" href="{{MEDIA_URL}}{{ product_image.image }}"><img src="{{MEDIA_URL}}{{ product_image.image }}" width="180px"></a></div></div>
+                <div class="project_photo">
+                    <a data-fancybox="gallery" href="{{MEDIA_URL}}{{ product_image.image }}">
+                    <img data-fancybox="gallery"src="{{MEDIA_URL}}{{ product_image.image }}" width="180px"></a></div></div>
  
                 {% endfor %}
                 </div>
@@ -104,6 +108,10 @@
                 
       </div>
 </div>
+  
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
 
 
 
