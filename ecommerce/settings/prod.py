@@ -7,7 +7,7 @@ DATABASES = {
 }
 
 
-ALLOWED_HOSTS = ["glo-lighting-humancode.c9users.io" , "glo-lighting.herokuapp.com"]
+ALLOWED_HOSTS = ["lighting-portal-humancode.c9users.io" , "glo-lighting.herokuapp.com"]
 
 AWS_STORAGE_BUCKET_NAME = os.environ.get("AWS_STORAGE_BUCKET_NAME")
 AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")

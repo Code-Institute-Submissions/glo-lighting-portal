@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block content %}
+<div class="container-fluid">
+    <div class="row">
+        {% for article in articles %}
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="articles">
+                <div class="caption">
+                    <h4 class="pull-right"></h4>
+                    <img width="200px" height="auto" class="card-img-top img-fluid" src="{{MEDIA_URL}}{{article.image}}" alt="{{article.tag}}">
+                    <h4><a href="#">{{article.title}}</a></h4>
+                    {{article.slug}}
+                    <p>{{article.body}}</p>
+                    <p>{{article.date}}</p>
+                </div>
+            </div>
+        </div>
+        {% if forloop.counter|divisibleby:3 %}
+    </div>
+ 
+        {% endif %} {% endfor %}
+</div>
+
+{% endblock content %}
+
