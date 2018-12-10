@@ -31,8 +31,7 @@
                     {% if product.brand %}
                     Brand:{{product.brand}}<br/>
                     {% endif %} 
-                
-                    
+
                     {% if product.material %}
                     Material:{{product.material}}<br/>
                     {% endif %}  
@@ -95,8 +94,11 @@
                     {% for product_image in product.images.all %}
                 <div class="project_container">    
                 <div class="project_photo">
-                    <a data-fancybox="gallery" href="{{MEDIA_URL}}{{ product_image.image }}">
-                    <img data-fancybox="gallery"src="{{MEDIA_URL}}{{ product_image.image }}" width="180px"></a></div></div>
+                    <a href="#popupParis" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="{{MEDIA_URL}}{{ product_image.image }}" alt="" style="width:180px"></a><div data-role="popup" id="popupParis" data-overlay-theme="b" data-theme="b" data-corners="false"><a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+                    
+                    <img class="popphoto" src="{{MEDIA_URL}}{{ product_image.image }}" style="max-height:80%" alt="{{ product_image.image }}">
+                    
+   </a></div></div>
  
                 {% endfor %}
                 </div>
@@ -110,8 +112,7 @@
 </div>
   
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
-<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
+
 
 
 
