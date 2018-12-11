@@ -1,27 +1,25 @@
 
-
 .navbar{
-text-shadow:none;
+text-shadow:white;
+background-color: #3e3f3a;
 
 }
 
 .navbar-brand:{
-    color:none;
-    background:none;
+    color:white;
+    background:white;
 }
 
 .ui-page-theme-a a:visited, html .ui-bar-a a:visited, html .ui-body-a a:visited, html body .ui-group-theme-a a:visited {
-    color: none;
+    color: white;
 }
 
 
 .ui-link{
-    shadow:none;
+    shadow:white;
 }
 
-.ui-page-theme-a a:visited, html .ui-bar-a a:visited, html .ui-body-a a:visited, html body .ui-group-theme-a a:visited {
-   color: redc; 
-}
+
 
 .navbar-default .navbar-nav>li>a {
     color: #a89b59;
@@ -32,13 +30,16 @@ text-shadow:none;
 }
 
 .img{
-color:none;}
+color:white;
+
+}
 
 
 
 body {
     font-family: Arial;
     padding-top: 100px;
+    background-color: white;
 }
 
 footer {
@@ -68,7 +69,7 @@ footer a:hover {
     width: 40px;
     height:40px;
     text-align: center;
-    text-decoration: none;
+    text-decoration: white;
     margin: 0px 20px;
     border-radius: 50%;
 }
@@ -167,7 +168,7 @@ In the future this will be different for each category */
 .cart{
     margin-left:-10px;
     margin-top:-40px;
-    color:grey;
+    color:#9f9354;
 }
 
 
@@ -195,5 +196,59 @@ background-color:#a89b59;
 
 btn hover{
     background-color: #a89b59;
+}
+
+btn btn-success{
+    background-color: #9f9354;
+    
+}
+
+.modalDialog {
+	position: fixed;
+	font-family: Roboto;
+	top: -40px;
+	right: 0;
+	bottom: -40;
+	left: 0;
+	background: rgba(0,0,0,0.70);
+	z-index: 99999;
+	opacity:0;
+
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+#btn-cross{
+    margin-left: 97%;
+    margin-top: 0%;
+}
+
+.model_title{
+    font-family: Roboto;
+    color: #9f9354;
+    text-align: center;
+    font-size:1em;
+    text-decoration:important none;
+}
+
+
+.modalDialog:target {
+	opacity:5;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 60%;
+	position: relative;
+	margin: 10% auto;
+	padding: -0px 5px 0px 5px;
+	border-radius: 0px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+	box-shadow: 1px 1px 2px white, 0 0 25px white, 0 0 5px white;
+
 }
 
