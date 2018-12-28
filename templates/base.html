@@ -27,28 +27,30 @@
   <!-- Fixed navigation-->
   <nav class="navbar navbar-masthead navbar-default navbar-fixed-top">
       <div class="container">
-          <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                   <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">GLO Lighting</a>
-            </div>
+                  <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                           <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/">GLO Lighting</a>
+                  </div>
       
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="{% url 'project_list' %}">Home</a></li>
-                <li><a href="{% url 'filter' 'suspension' %}">Suspension</a></li>
-                <li><a href="{% url 'filter' 'floor' %}">Floor</a></li>
-                <li><a href="{% url 'filter' 'table' %}">Table</a></li>
-                <li><a href="{% url 'filter' 'wall-ceiling' %}">Wall/Ceiling</a></li>
-                <li><a href="{% url 'filter' 'outside' %}">Outside</a></li>
-                <li><a href="/articles">articles</a></li>
-                <li><a href="{% url 'view_cart' %}"><i class="fa fa-shopping-cart cart"></i> </a>
-              </ul>
-            </div>
+                  <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                      <li><form action="{% url 'search' %}" method="get"><input type="text" class="form-control"  placeholder="Search" name="q"></li>
+                      <li><a href="{% url 'project_list' %}">Home</a></li>
+                      <li><a href="{% url 'filter' 'suspension' %}">Suspension</a></li>
+                      <li><a href="{% url 'filter' 'floor' %}">Floor</a></li>
+                      <li><a href="{% url 'filter' 'table' %}">Table</a></li>
+                      <li><a href="{% url 'filter' 'wall-ceiling' %}">Wall/Ceiling</a></li>
+                      <li><a href="{% url 'filter' 'outside' %}">Outside</a></li>
+                      <li><a href="/articles">articles</a></li>
+                      
+                      <li><a href="{% url 'view_cart' %}"><i class="fa fa-shopping-cart cart"></i></a></i></form>
+                  </div>
+          
       </div>
   </nav>
 

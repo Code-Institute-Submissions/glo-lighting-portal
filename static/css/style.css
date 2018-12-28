@@ -47,7 +47,7 @@ footer {
     padding-top: 40px;
     padding-bottom: 40px;
     border-top: 1px solid #ededed;
-    color: white;
+    color: #a89b59;
     background-color: #3e3f3a;
 }
 
@@ -59,13 +59,17 @@ footer a:hover {
     color: #efefef;
 }
 
-
+.footer-social {
+  color:#a89b59;  
+    
+}
 
  /* social media */        
         
 .fa {
     padding: 5px;
     font-size: 30px;
+    color:#a89b59;
     width: 40px;
     height:40px;
     text-align: center;
@@ -74,30 +78,34 @@ footer a:hover {
     border-radius: 50%;
 }
 
-.fa:hover {
+.fa fa:hover {
     opacity: 0.7;
 }
 
-.fa-facebook  {
-    color: white;
+.fa fa-facebook  {
+    color: #a89b59;
 }
 
-.fa-twitter {
-    color: white;
+.fa fa-twitter {
+    color:#a89b59;
 }
 
-.fa-youtube {
-    color: white;
+.fa fa-youtube {
+    color: #a89b59;
 }
 
-.fa-instagram {
-    color: white;
+.fa fa-instagram {
+    color: #a89b59;
 }
 
 .accountform {
     padding-top: 20px;
 }
 
+.list-unstyled {
+    
+    color:#a89b59;
+}
  unvisited link 
 a:link {
     color: white;
@@ -126,7 +134,7 @@ a:active {
     display:block;
     float: left;
 }
-/*This css block will keep image width consisten inside the project container*/
+/*This css block will keep image width consistant inside the project container*/
 .project_photo img{
     width: 200px;
     margin-left:3px;
@@ -148,8 +156,16 @@ a:active {
 }
 
 .navbar-brand{
-     font-family: 'Orbitron', sans-serif;  
+     font-family: 'Orbitron', sans-serif; 
+     max-width:300px;
+     display:inline;
 } 
+
+.navbar-header{
+    
+
+    
+}
 
 /*The large static header image at the top
 In the future this will be different for each category */
@@ -172,7 +188,7 @@ In the future this will be different for each category */
 }
 
 
-/* this the grey band under the large static header image
+/* this the dark grey band under the large static header image
 In the future it will be used to house different filers for each category*/
 
 .filter-bar{
@@ -203,7 +219,7 @@ btn btn-success{
     
 }
 
-.modalDialog {
+.modal_dialog {
 	position: fixed;
 	font-family: Roboto;
 	top: -40px;
@@ -233,22 +249,15 @@ btn btn-success{
 }
 
 
-.modalDialog:target {
+.modal_dialog:target {
 	opacity:5;
 	pointer-events: auto;
 }
 
-.modalDialog > div {
-	width: 60%;
-	position: relative;
-	margin: 10% auto;
-	padding: -0px 5px 0px 5px;
-	border-radius: 0px;
-	background: #fff;
-	background: -moz-linear-gradient(#fff, #999);
-	background: -webkit-linear-gradient(#fff, #999);
-	background: -o-linear-gradient(#fff, #999);
-	box-shadow: 1px 1px 2px white, 0 0 25px white, 0 0 5px white;
 
+.form-control{
+    margin-top:15px;
+    height:20px;
+    width:100px;
 }
 
