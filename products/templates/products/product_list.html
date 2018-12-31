@@ -1,14 +1,35 @@
 {% extends "base.html" %} {% block content %}
-
-<div class="row amazing_jumbo_pic">
+<div class="wide_band_top">
+    <div class="telephone">
+       <h5> <i class="fas fa-phone"><a href="00 31 6 53 74 76 41"></i>   help desk +31 (0)6 53 74 76 41</a></h5>
+    </div>
 </div>
-<div class="filter-bar">
+
+<div class="amazing_jumbo_pic">
+    </div>
+<div class="container"></div>
+<div class="navbar-filter">
+    <a href="{% url 'project_list' %}">All brands</a>
+    <a href="/articles">Articles</a>
+    <button class="dropbtn" onclick="myFunction()">Lighting types</button>
+    <div class="dropdown-content" id="myDropdown"> 
+    <a href="{% url 'filter' 'suspension' %}">Suspension</a>
+    <a href="{% url 'filter' 'floor' %}">Floor</a>
+    <a href="{% url 'filter' 'table' %}">Table</a>
+    <a href="{% url 'filter' 'wall-ceiling' %}">Wall/Ceiling</a>
+    <a href="{% url 'filter' 'outside' %}">Outside</a>    
+</div>
+</div>
+<div class="wide_band"></div>
+<center><h3>
+Top Lighting from around the world 
+</h3></center>
     
-    <!--{% if messages %}-->
+    {% if messages %}
 
-    <!--      {% for message in messages %} {{ message }} {% endfor %}-->
+          {% for message in messages %} {{ message }} {% endfor %}
 
-    <!-- {% endif %}   -->
+     {% endif %}   
 </div>
 <div class="container-fluid">
     <div class="row">
@@ -21,6 +42,7 @@
         {% if forloop.counter|divisibleby:6 %}
     </div>
     <div class="row">
+        
         {% endif %} {% endfor %}
     </div>
 </div>

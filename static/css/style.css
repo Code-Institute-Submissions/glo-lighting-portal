@@ -1,28 +1,32 @@
 
 .navbar{
+top:30px;
 text-shadow:white;
 background-color: #3e3f3a;
-
+width:100%;
+margin:0px;
+font-family: 'Barlow Condensed', sans-serif;
 }
 
 .navbar-brand:{
     color:white;
     background:white;
+   
 }
 
 .ui-page-theme-a a:visited, html .ui-bar-a a:visited, html .ui-body-a a:visited, html body .ui-group-theme-a a:visited {
     color: white;
 }
 
-
 .ui-link{
     shadow:white;
 }
 
 
-
 .navbar-default .navbar-nav>li>a {
     color: #a89b59;
+    font-size:1.5em;
+    
 }
 
 .ui-page-theme-a a:visited, html .ui-bar-a a:visited, html .ui-body-a a:visited, html body .ui-group-theme-a a:visited {
@@ -82,20 +86,23 @@ footer a:hover {
     opacity: 0.7;
 }
 
-.fa fa-facebook  {
+.fa  {
     color: #a89b59;
 }
 
-.fa fa-twitter {
-    color:#a89b59;
+
+.fa-shopping-cart{
+    margin-left:-10px;
+    margin-top:-20px;
+    color:#9f9354;
+    font-size: 2em;
+    background-color:none;
 }
 
-.fa fa-youtube {
-    color: #a89b59;
-}
-
-.fa fa-instagram {
-    color: #a89b59;
+.fa-home{
+    margin-top:-20px;
+    color:#9f9354;
+    font-size: 1.5em;
 }
 
 .accountform {
@@ -158,6 +165,8 @@ a:active {
 .navbar-brand{
      font-family: 'Orbitron', sans-serif; 
      max-width:300px;
+     font-size:2.5em;
+     
      display:inline;
 } 
 
@@ -177,27 +186,21 @@ In the future this will be different for each category */
     margin-top:-60px;
     margin-left: -33.33%;
     margin-right: -33.33%;
-    margin-bottom:30px;
+    margin-bottom:0px;
     background-image: url("https://s3.eu-west-3.amazonaws.com/glo-lighting/media/jumbo_pics/lzf-jumbo_pic.jpg");
 }
 
-.cart{
-    margin-left:-10px;
-    margin-top:-40px;
-    color:#9f9354;
-}
 
 
-/* this the dark grey band under the large static header image
-In the future it will be used to house different filers for each category*/
+/* This is a menu bar which is specific for each project category*/
 
 .filter-bar{
     height:40px;
     margin-top:-30px;
-    margin-left: -33.33%;
-    margin-right: -33.33%;
     margin-bottom:30px;
     background-color:#3e3f3a;
+    color:white;
+
 }
 
 .btn-invisable{
@@ -210,14 +213,18 @@ z-index:200;
 background-color:#a89b59;
 }
 
-btn hover{
+.btn-success {
+    color: #fff;
     background-color: #a89b59;
 }
-
-btn btn-success{
-    background-color: #9f9354;
+.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #5e5845;
     
 }
+
+
+
 
 .modal_dialog {
 	position: fixed;
@@ -229,12 +236,12 @@ btn btn-success{
 	background: rgba(0,0,0,0.70);
 	z-index: 99999;
 	opacity:0;
-
 	-webkit-transition: opacity 400ms ease-in;
 	-moz-transition: opacity 400ms ease-in;
 	transition: opacity 400ms ease-in;
 	pointer-events: none;
 }
+
 #btn-cross{
     margin-left: 97%;
     margin-top: 0%;
@@ -258,6 +265,73 @@ btn btn-success{
 .form-control{
     margin-top:15px;
     height:20px;
-    width:100px;
+   
 }
+
+
+.badge-light{
+    
+    background-color:red;
+    margin-left:-20px;
+   
+}
+
+
+.btn{
+    background-color:x#a89b59;
+}
+
+
+/* search*/
+
+* {
+  box-sizing: border-box;
+}
+
+form.product_finder input[type=text] {
+  padding: 10px;
+  font-size: 12px;
+  border: 1px solid grey;
+  float: left;
+  width: 200px;
+  height:25px;
+  background: white;
+  margin-top:20px;
+
+}
+
+form.product_finder button {
+  float: left;
+  height:25px;
+  padding-top: 15px;
+  padding-left: 0px;
+  margin-left:-10px;
+  margin-bottom:0px;
+  background: none;
+  color: white;
+  font-size: 12px;
+  border: 0px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+.fa-search{
+ position:absolute;
+ z-index: 99;
+ margin-top:8px;
+ margin-left:-27px;
+ color:#9f9354;
+ font-size: 1.5em;
+}
+
+form.product_finder button:hover {
+  background: none;
+}
+
+form.product_finder::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 
