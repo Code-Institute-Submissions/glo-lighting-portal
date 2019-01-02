@@ -188,19 +188,19 @@ In the future this will be different for each category */
     margin-bottom:0px;
 }
 
-.light{
+.lighting{
 
-    background-image: url("https://s3.eu-west-3.amazonaws.com/glo-lighting/media/jumbo_pics/lzf-jumbo_pic.jpg");
+    background-image: url("https://s3.eu-west-3.amazonaws.com/glo-lighting/media/jumbo_pics/lighting_pic.jpg");
 }
 
 .bathrooms{
 
-    background-image: url("https://s3.eu-west-3.amazonaws.com/glo-lighting/media/jumbo_pics/furniture_pic.jpg");
+    background-image: url("https://s3.eu-west-3.amazonaws.com/glo-lighting/media/jumbo_pics/bathroom_pic.jpg");
 }
 
 .furniture{
 
-    background-image: url("https://s3.eu-west-3.amazonaws.com/glo-lighting/media/jumbo_pics/bathroom_pic.jpg");
+    background-image: url("https://s3.eu-west-3.amazonaws.com/glo-lighting/media/jumbo_pics/furniture_pic.jpg");
 }
 
 

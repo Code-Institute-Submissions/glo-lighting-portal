@@ -8,6 +8,7 @@
   <title>Glo-lighting</title>
   
   {% block head_style %}
+  <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow|Barlow+Condensed" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://bootswatch.com/3/sandstone/bootstrap.min.css">
@@ -15,6 +16,7 @@
   <link href="https://fonts.googleapis.com/css?family=Orbitron:400,500" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
   <link rel="stylesheet" href="{% static 'css/lighting_navbar_lighting.css' %}"> 
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   {% endblock head_style %} 
   
     {% block head_js %}
@@ -48,12 +50,11 @@
                             </form>
                         </li>
                       <li><a href="{% url 'project_list' %}"><i class="fa fa-home"></a></i>
-                      <li><a href="#">Bathrooms</a></li>
-                      <li><a href="#">Furniture</a></li>
+                      <li><a href="{% url 'bathrooms_list' %}">Bathrooms</a></li>
+                      <li><a href="{% url 'furniture_list' %}">Furniture</a></li>
                       <li><a href="{% url 'project_list' %}">Lighting</a></li>
-                      <li><a href="#">Kitchens</a></li>
-                      <li><a href="{% url 'view_cart' %}">Cart<i class="fa fa-shopping-cart"></i>                       
-                        <label class="badge badge-light">{{ number_of_items_in_cart }}</label></a>
+                      <li><a href="{% url 'view_cart' %}">Cart&nbsp;&nbsp;&nbsp;<i class="fa fa-shopping-cart"></i>                       
+                      <label class="badge badge-light">{{ number_of_items_in_cart }}</label></a>
                       
                       </ul>
                   </div>
