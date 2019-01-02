@@ -25,6 +25,9 @@ from search import urls as search_urls
 from checkout import urls as checkout_urls
 from sendemail import urls as sendemail_urls
 from articles import urls as articles_urls
+from bathrooms import urls as bathrooms_urls
+from furniture import urls as furniture_urls
+
 
 
 
@@ -41,26 +44,11 @@ urlpatterns = [
     path('products/', include(products_urls)),
     path('sendemail/', include(sendemail_urls)),
     path('articles/', include(articles_urls)),
+    path('bathrooms/',include(bathrooms_urls)),
+    path('furniture/',include(furniture_urls)),
 
 
-    # path('blog_accounts/register/', register, name='register'),
-    # path('blog_accounts/', include('django.contrib.auth.urls'),
-    # path('', articals_list, name="home"),
-
-    # path('blog_accounts/password-reset/', password_reset,
-    #     {'post_reset_redirect': reverse_lazy('password_reset_done')}, name='password_reset'),
-    # path('blog_accounts/password-reset/done/', password_reset_done, name='password_reset_done'),
-    # url(r'^(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$', password_reset_confirm,
-    #     {'post_reset_redirect': reverse_lazy('password_reset_complete')}, name='password_reset_confirm'),
-    # path('blog_accounts/password-reset/complete/', password_reset_complete, name='password_reset_complete'),
-
-    # path('articles/<int:id>', post_detail, name="post_detail"),
-    # path('articles/<int:id>/edit', edit_post, name="edit_article"),
-    # path('articles/add', add_post, name="add_article"),
-    # path('search', search_posts, name='search_article'),
-    # path('media/<path:path>', serve, {'document_root': settings.MEDIA_ROOT}),
-    # path('articles/<int:id>/like', like_post, name="like_article"),
-    # path('articles/<int:id>/unlike', unlike_post, name="unlike_article"),
+   
 
 ]
 

@@ -178,7 +178,6 @@ a:active {
 
 /*The large static header image at the top
 In the future this will be different for each category */
-
 .amazing_jumbo_pic{
     z-index:-100;
     position:static;
@@ -187,7 +186,21 @@ In the future this will be different for each category */
     margin-left: -33.33%;
     margin-right: -33.33%;
     margin-bottom:0px;
+}
+
+.light{
+
     background-image: url("https://s3.eu-west-3.amazonaws.com/glo-lighting/media/jumbo_pics/lzf-jumbo_pic.jpg");
+}
+
+.bathrooms{
+
+    background-image: url("https://s3.eu-west-3.amazonaws.com/glo-lighting/media/jumbo_pics/furniture_pic.jpg");
+}
+
+.furniture{
+
+    background-image: url("https://s3.eu-west-3.amazonaws.com/glo-lighting/media/jumbo_pics/bathroom_pic.jpg");
 }
 
 

@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'products',
+    'bathrooms',
+    'furniture',
     'accounts',
     'storages',
     'django_forms_bootstrap',
@@ -47,6 +49,7 @@ INSTALLED_APPS = [
     'sendemail',
     'articles',
     'search',
+
 
     
     
