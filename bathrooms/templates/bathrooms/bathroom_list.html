@@ -36,7 +36,7 @@ Top Bathrooms from around the world
         {% for product in products %}
         <div class="col-sm-2 col-lg-2 col-md-2">
             <div class="thumbnail">
-                <!--<a href="{% url 'product_detail' product.id %}"><img src="{{MEDIA_URL}}{{product.image}}" alt="{{product.name}}"></a>-->
+                <a href="{% url 'product_detail' product.id %}"><img src="{{MEDIA_URL}}{{product.image}}" alt="{{product.name}}"></a>
             </div>
         </div>
         {% if forloop.counter|divisibleby:6 %}
