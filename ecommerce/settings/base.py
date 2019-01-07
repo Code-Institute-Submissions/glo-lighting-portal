@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'sendemail',
     'articles',
     'search',
+   
+    
 
 
     
@@ -81,6 +83,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
                 'cart.contexts.number_of_items_in_cart',
+                
             ],
         },
     },

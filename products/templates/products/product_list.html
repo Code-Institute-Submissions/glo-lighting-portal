@@ -5,8 +5,25 @@
     </div>
 </div>
 
+
+
+
+{% if products.2 %}
 <div class="amazing_jumbo_pic lighting">
     </div>
+{% endif %}    
+    
+{% if furniture %}
+<div class="amazing_jumbo_pic furniture">
+    </div>
+{% endif %}
+
+{% if category.bathrooms %}
+<div class="amazing_jumbo_pic bathrooms">
+    </div>
+{% endif %}    
+    
+
 <div class="container"></div>
 <div class="navbar-filter">
     <a href="{% url 'project_list' %}">All brands</a>

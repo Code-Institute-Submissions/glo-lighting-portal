@@ -1,4 +1,10 @@
 {% extends "base_detail.html" %} {% block content %}
+
+<div class="wide_band_top">
+    <div class="telephone">
+       <h5> <i class="fas fa-phone"><a href="00 31 6 53 74 76 41"></i>   help desk +31 (0)6 53 74 76 41</a></h5>
+    </div>
+</div>
 <div class="container-fluid">
     <div class="container">
         <div class="row">  
@@ -92,17 +98,12 @@
                 <span class="text-warning"> </div>
                 <div class="col-xs-12">
                     {% for product_image in product.images.all %}
-                <div class="project_container">    
-                <div class="project_photo">
-        <a href="#openModal"><img src="{{MEDIA_URL}}{{ product_image.image }}" width=180px></a></div>
-        <div id="openModal" class="modalDialog">
-            <div>
-        		<a href="#close" class="close"><img src="{{MEDIA_URL}}plus.gif" id="btn-cross"><div class="model_title">model title</div></a>
-        		<p><img src="{{MEDIA_URL}}{{ product_image.image }}" width="100%"></p>
-        	</div>
-         </div> 
-                </div>
-                </div>
+                    <div class="project_container">    
+                        <div class="project_photo">
+                        <p><img src="{{MEDIA_URL}}{{ product_image.image }}" width=180px></p>
+        	        </div>
+                 </div> 
+             
  
                 {% endfor %}
                 </div>
@@ -110,7 +111,7 @@
                     <!-- {% for star in product.stars %}-->
                     <!--<i class="fa fa-star"></i> {% endfor %} {% if product.needs_half_star %}-->
                     <!--<i class="fa fa-star-half"></i> {% endif %}</div>-->
-                </div>
+             </div>
       </div>
 </div>
   

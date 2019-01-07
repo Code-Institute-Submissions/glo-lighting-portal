@@ -32,7 +32,6 @@ from furniture import urls as furniture_urls
 
 
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('sendemail.urls')),

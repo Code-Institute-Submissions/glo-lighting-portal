@@ -58,3 +58,11 @@ def edit_product(request, id):
         form = ProductForm(instance=product)
     
     return render(request, "products/product_form.html", {'form': form})
+
+# furture furniture furture furniture furture furniture furture furniture 
+
+
+    
+
+
+
