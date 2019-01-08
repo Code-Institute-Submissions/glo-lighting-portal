@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Glo-lighting</title>
+  <title>ARCHIMANIC</title>
   
   {% block head_style %}
-  <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow|Barlow+Condensed" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow%7CBarlow+Condensed" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://bootswatch.com/3/sandstone/bootstrap.min.css">
@@ -43,18 +43,20 @@
       
                   <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
+                        
                         <li>
                            <form class="product_finder" action="{% url 'search' %}">
                             <input type="text" placeholder="Search.." name="q">
                             <button type="submit"><i class="fa fa-search"></i></button>
                             </form>
                         </li>
-                      <li><a href="{% url 'project_list' %}"><i class="fa fa-home"></a></i>
+                        
+                      <li><a href="{% url 'project_list' %}"><i class="fa fa-home"></i></a>
                       <li><a href="{% url 'bathrooms_list' %}">Bathrooms</a></li>
                       <li><a href="{% url 'furniture_list' %}">Furniture</a></li>
                       <li><a href="{% url 'project_list' %}">Lighting</a></li>
                       <li><a href="{% url 'view_cart' %}">Cart&nbsp;&nbsp;&nbsp;<i class="fa fa-shopping-cart"></i>                       
-                      <label class="badge badge-light">{{ number_of_items_in_cart }}</label></a>
+                      <label class="badge badge-light">{{ number_of_items_in_cart }}</label></a></i>
                       
                       </ul>
                   </div>
@@ -66,18 +68,15 @@
       {% block content %}
       <!-- page content is injected here -->
       {% endblock %}
-    </div>
+   
   </div>
-  
+<div class="footer_full_width">  
 <footer class="page-footer font-small  pt-4">
-    
-    
-        <!-- future Content goes here -->
-      </div>  
 <div class="col-md-6 ">
-  <div class="col-md-3 mb-md-0 mb-3">
+    <div class="col-md-3 mb-md-0 mb-3">
       <h5><a href="{% url 'register' %}">Register here</a></h5>
-      <h5><a href="{% url 'login' %}"></a></h5>
+         <a href="{% url 'login' %}"></a>
+         
         <ul class="list-unstyled">
             <li>
                 {% if user.is_authenticated %}
@@ -86,18 +85,21 @@
             <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Log In</a></li>
                 {% endif %}
         </ul>
-</div>
+    </div>
+If you are an architect photographer/writer/ or journalist and you wish to publish an interesting article
+with photos about your company's latest project please sign up on the left hand side.
+Our team will determine whether your article reaches the standards set out by Archimanic.
+Apon approval your article will published.<br/>
 
-
-<!-- future Content goes here logos etc-->
-</div>
+Kind regards team Achimanic </div>
 <div class="col-md-3 mb-md-0 mb-3"> 
+
 </div>
 
 <div class="col-md-3 mb-md-0 mb-3 sellers">
       <h5>Sellers</h5>
         <ul class="list-unstyled">
-            <li><a href="{% url 'email' %}" >if you are a manufacturer of a brand and would like to place your products on glo lighting please contact us<br>sales@glolighting.nl</a>
+            <li><a href="{% url 'email' %}" >if you are a manufacturer of a brand and would like to place your products on glo lighting please contact us<br>sales@archimanic.com</a>
                 {% if user.is_authenticated %}
             <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a></li>
             <li><a href="{% url 'add_product' %}"><i class="fa fa-user-plus"></i>Add product</a></li>
@@ -113,11 +115,12 @@
 <a href="#" class="fa fa-youtube"></a>
 <a href="#" class="fa fa-instagram"></a>
 </div>
-  
+</div>  
 
 </footer>
   <script src="{% static 'js/dropdown.js' %}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!-- Footer -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Footer -->
  
 
           

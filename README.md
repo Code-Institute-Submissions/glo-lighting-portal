@@ -1,4 +1,4 @@
-# GloLighting
+# ARCHIMANIC
 See demo: https://glo-lighting.herokuapp.com/
 
 The original idea of this ecommerce website was only going be for "lighting" but I decided it would be nice to add other categories such as furniture and 

@@ -1,29 +1,12 @@
 {% extends "base.html" %} {% block content %}
 <div class="wide_band_top">
     <div class="telephone">
-       <h5> <i class="fas fa-phone"><a href="00 31 6 53 74 76 41"></i>   help desk +31 (0)6 53 74 76 41</a></h5>
+       <h5<a href="tel:0031653747641">&nbsp;Help desk +31 (0)6 53 74 76 41</a></i></h5>
     </div>
 </div>
 
-
-
-
-{% if products.2 %}
 <div class="amazing_jumbo_pic lighting">
     </div>
-{% endif %}    
-    
-{% if furniture %}
-<div class="amazing_jumbo_pic furniture">
-    </div>
-{% endif %}
-
-{% if category.bathrooms %}
-<div class="amazing_jumbo_pic bathrooms">
-    </div>
-{% endif %}    
-    
-
 <div class="container"></div>
 <div class="navbar-filter">
     <a href="{% url 'project_list' %}">All brands</a>
@@ -38,15 +21,14 @@
 </div>
 </div>
 <div class="wide_band"></div>
-<center><h3>
+<h3>
 Top Lighting from around the world 
-</h3></center>
-    
-    {% if messages %}
-
-          {% for message in messages %} {{ message }} {% endfor %}
-
-     {% endif %}   
+</h3>
+     <div class="messages"> 
+     {% if messages %}
+         {% for message in messages %} {{ message }} {% endfor %}
+     {% endif %} 
+     </div> 
 </div>
 <div class="container-fluid">
     <div class="row">

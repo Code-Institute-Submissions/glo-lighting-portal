@@ -3,19 +3,17 @@ from .models import Product
 from .models import Brand
 from .forms import ProductForm
 
+
 def filter_by_product_type(request,type):
     products = Product.objects.filter(product_type=type)
-    return render(request, "products/product_list.html" , {'products': products})
+    return render(request, "products/product_list.html" , {'products': products}) 
     
-    
-# Create your views here.
 def project_list(request):
     return render(request, "product/project_list.html")
 
 def product_list(request):
     products = Product.objects.all()
     return render(request, "products/product_list.html" , {'products': products})
-
 
 def product_detail(request, id):
     product = get_object_or_404(Product, pk=id)
@@ -27,8 +25,6 @@ def logo_brand(request, id):
     
 def add_product(request):
     return render(request, "products/product_form.html")
-    
-
     
 def add_product(request):
     if request.method=="POST":
