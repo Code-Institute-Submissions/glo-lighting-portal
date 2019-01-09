@@ -15,8 +15,7 @@ font-family: 'Barlow Condensed', sans-serif;
 
 /*logo*/
 .navbar-brand{
-    margin-top:11px;
-     font-family: 'Orbitron', sans-serif; 
+    margin-top:0px;
      max-width:300px;
      font-size:2.5em;
      display:inline;
@@ -366,6 +365,7 @@ margin-bottom:20px;
 .three{
 color:#a89b59;
 margin-bottom:20px;
+border-radius:8px;
 }
 
 .four {
