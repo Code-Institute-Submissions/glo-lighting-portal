@@ -1,8 +1,10 @@
 # ARCHIMANIC
 See demo: https://glo-lighting.herokuapp.com/
 
-The original idea of this ecommerce website was only going be for "lighting" but I decided it would be nice to add other categories such as furniture and 
-bathrooms therefore this project contains only lighting content at the moment.
+<a href="https://gowild.nl/achimanic/designs.html" >
+Click here to see the initial designs</a>
+
+The original idea of this ecommerce website was going to be for "glo lighting" but I decided move a step further and add other categories ie.  therefore this project only has lighting content at the moment. Furniture and Bathrooms has yet to be added into the products/model.py
 
 Archimanic is a service providing a show case for the ***best brands from all around the world.*** 
 The site is specifically built to facilitate the needs of interieur architects and designers

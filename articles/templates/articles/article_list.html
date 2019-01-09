@@ -1,4 +1,15 @@
-{% extends "base_art_detail.html" %} {% block content %}
+{% extends "base_detail.html" %} {% block content %}
+<div class="wide_band_top">
+    <div class="header-social">
+        <p>    
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        </p>
+    </div>
+</div>
+<div class="top_space"></div>
 <div class="container ">
     <div class="row">
         {% for article in articles %}
@@ -7,6 +18,7 @@
                     <img  class="card-img-top img-fluid" src="{{MEDIA_URL}}{{article.image}}" alt="{{article.tag}}" width="200">
                      <div class="caption">
                     <h4><a href="#">{{article.title}}</a></h4>
+                   
                        {{article.slug}}
                     <p>{{article.body}}</p>
                     <p>{{article.date}}</p>

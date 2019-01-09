@@ -1,7 +1,13 @@
 {% extends "base.html" %} {% block content %}
 <div class="wide_band_top">
-    <div class="telephone">
-       <h5> <i class="fas fa-phone"><a href="0031653747641">help desk +31 (0)6 53 74 76 41</a></i></h5>
+<div class="header-social">
+<p>    
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-youtube"></a>
+<a href="#" class="fa fa-instagram"></a>
+</p>
+
     </div>
 </div>
 
@@ -16,20 +22,18 @@
     <a href="#">Living Room</a>
     <a href="#">Bedroom</a>
     <a href="#">kitchen</a>
-    <a href="#">decor</a>
-     
+    <a href="#">decor</a>   
 </div>
 </div>
 <div class="wide_band"></div>
 <h3>
-Top Furniture from around the world 
+Top Lighting from around the world 
 </h3>
-    
-    {% if messages %}
-
-          {% for message in messages %} {{ message }} {% endfor %}
-
-     {% endif %}   
+     <div class="messages"> 
+     {% if messages %}
+         {% for message in messages %} {{ message }} {% endfor %}
+     {% endif %} 
+     </div> 
 </div>
 <div class="container-fluid">
     <div class="row">
@@ -48,3 +52,4 @@ Top Furniture from around the world
 </div>
 
 {% endblock content %}
+

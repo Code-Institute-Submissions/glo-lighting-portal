@@ -1,1 +1,52 @@
-<h1>Thankyou for your email!</h1>
+{% extends "base.html" %} {% block content %}
+<div class="wide_band_top">
+<div class="header-social">
+<p>    
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-youtube"></a>
+<a href="#" class="fa fa-instagram"></a>
+</p>
+
+    </div>
+</div>
+
+<div class="amazing_jumbo_pic lighting">
+    </div>
+<div class="container"></div>
+<div class="navbar-filter">
+    <a href="{% url 'project_list' %}">All brands</a>
+    <a href="/articles">Articles</a>
+    <button class="dropbtn" onclick="myFunction()">Lighting types</button>
+    <div class="dropdown-content" id="myDropdown"> 
+    <a href="{% url 'filter' 'suspension' %}">Suspension</a>
+    <a href="{% url 'filter' 'floor' %}">Floor</a>
+    <a href="{% url 'filter' 'table' %}">Table</a>
+    <a href="{% url 'filter' 'wall-ceiling' %}">Wall/Ceiling</a>
+    <a href="{% url 'filter' 'outside' %}">Outside</a>    
+</div>
+</div>
+<div class="wide_band"></div>
+<h3>
+Top Lighting from around the world 
+</h3>
+     <div class="messages"> 
+  Your email has been sent!
+     </div> 
+</div>
+<div class="container-fluid">
+    <div class="row">
+        {% for product in products %}
+        <div class="col-sm-2 col-lg-2 col-md-2">
+            <div class="thumbnail">
+                <a href="{% url 'product_detail' product.id %}"><img src="{{MEDIA_URL}}{{product.image}}" alt="{{product.name}}"></a>
+            </div>
+        </div>
+        {% if forloop.counter|divisibleby:6 %}
+    </div>
+    <div class="row">
+        {% endif %} {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

@@ -87,6 +87,7 @@ button{
 .wide_band_top{
   z-index:-2;
   position: absolute;
+  font-size:1em;
   width:100%;
   height: 40px;
   top:0px;
@@ -99,16 +100,6 @@ button{
 }
 
 
-.telephone a{
-  top:0px;
-  text-align: center;
-  font-size:1em;
-  color:white;
-  font-family: Arial, Sans-serif;
-}
 
-.sellers{
-  padding-left:15px;
-  
-}
+
 
