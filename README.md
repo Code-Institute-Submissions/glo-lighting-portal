@@ -54,6 +54,7 @@ designers will be able to create mood boards and also purchase lamps directly.
     If a consumer closes the browser window and comes back the next day, their shopping basket will not have forgotten the product details in the shopping cart.
 
 - search function. </li>
+- jQuery lightbox Featherlight. has been integrated with the detail photos which means you can enlarge the thumbnail by clicking on it.
 
 - Articles.(blog) Read the text in the footer to find out more.</li>
 
