@@ -181,10 +181,13 @@ a:active {
 
 .thumbnail{
 		    display:inline-block;
-		    width:100px;
-		    background-color:none;
-		    border:red;
+		    background-color:white;
+		    border:white;
+		    border: 0px;
 		}
+		
+		
+
 
 
 
