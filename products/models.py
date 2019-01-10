@@ -40,7 +40,18 @@ COLOUR_CHOICE = (
     )    
 
 
+LAMP_TYPE_CHOICES = (
+    	('X', 'choose type'),
+    	('suspension', 'suspension'),	
+    	('floor', 'floor'),
+    	('table', 'table'),
+    	('wall-ceiling', 'wall-ceiling'),
+    	('recessed', 'recessed'),
+    	('outside', 'outside'),
+    )  
+
 class Product(models.Model):
+    
     image = models.ImageField(upload_to="images" , null=True, blank=True)
     name= models.CharField(max_length=40, blank=False, null=False)
     material= models.CharField(max_length=40, blank=True, null=True,default='X', choices=MATERIAL_CHOICES)
@@ -61,9 +72,13 @@ class Product(models.Model):
     product_type = models.CharField(max_length=15, blank=False, null=False, default='X', choices=LAMP_TYPE_CHOICES)
     miscellaneous = models.TextField(blank=True, null=True)
     brand = models.ForeignKey(Brand, null=False, related_name="line_items", on_delete=models.CASCADE)
+  
     
     def __str__(self):
         return self.name
+        
+        
+        
         
         
 class ProductImage(models.Model):

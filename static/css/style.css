@@ -16,7 +16,7 @@ h4{
 /*This overwrites the standard bootstrap navigation bar*/
 .navbar{
 top:35px;
-text-shadow:white;
+text-shadow:#ffffff;
 background-color: #3e3f3a;
 width:100%;
 font-family: 'Barlow Condensed', sans-serif;
@@ -31,12 +31,10 @@ font-family: 'Barlow Condensed', sans-serif;
 } 
 
 .ui-page-theme-a a:visited, html .ui-bar-a a:visited, html .ui-body-a a:visited, html body .ui-group-theme-a a:visited {
-    color: white;
+    color: #ffffff;
 }
 
-.ui-link{
-    shadow:white;
-}
+
 
 /*nav menu list at top of the page*/
 .navbar-default .navbar-nav>li>a {
@@ -52,7 +50,7 @@ font-family: 'Barlow Condensed', sans-serif;
 
 /*This overwrite the standard bootstrap grey background*/
 .img{
-color:white;
+color:#ffffff;
 
 }
 
@@ -62,7 +60,7 @@ color:white;
 body {
     font-family: Arial;
     padding-top: 100px;
-    background-color: white;
+    background-color: #ffffff;
 }
 
 
@@ -102,7 +100,7 @@ footer a:hover {
     width: 40px;
     height:40px;
     text-align: center;
-    text-decoration: white;
+    text-decoration: #ffffff;
     margin-top: -8px;
     border-radius: 50%;
 }
@@ -122,7 +120,6 @@ footer a:hover {
     margin-top:0px;
     color:#9f9354;
     font-size: 1.2em;
-    background-color:none;
 }
 /*Home icon*/
 .fa-home{
@@ -141,17 +138,17 @@ footer a:hover {
 }
  unvisited link 
 a:link {
-    color: white;
+    color: #ffffff;
 }
 
  visited link 
 a:visited {
-    color: white;
+    color: #ffffff;
 }
 
  mouse over link 
 a:hover {
-    color: white;
+    color: #ffffff;
 }
 
  selected link 
@@ -172,24 +169,15 @@ a:active {
     width: 200px;
     margin-left:3px;
 }
-/*This css overides the bootstrap theme removing the standard border*/
-/*.thumbnail {*/
-/*    top:20px;*/
-/*    border: 0px;*/
-/*    background-color: white;*/
-/*}*/
 
+/*This css overides the bootstrap theme removing the standard border*/
 .thumbnail{
 		    display:inline-block;
-		    background-color:white;
-		    border:white;
+		    background-color:#ffffff;
+		    border:#ffffff;
 		    border: 0px;
-		}
+}
 		
-		
-
-
-
 
 .add-to-cart{
     float:right;
@@ -197,7 +185,7 @@ a:active {
 /*edit button submit only appear when user is logged in*/
 .edit_button btn btn-success{
     float:right; 
-    display:hidden;
+    display:none;
 }
 
 /*The large static header image at the top
@@ -238,12 +226,12 @@ In the future this will be different for each category */
     width: 100%;
     background-color:#3e3f3a;
     text-align:center;
-    color:white;
+    color:#ffffff;
 
 }
 
 .btn-invisable{
-   display:hidden; 
+   display:none; 
 }
 
 .alert-success{
@@ -271,7 +259,7 @@ background-color:#a89b59;
     
     background-color:red;
     margin-left:0px;
-    border-radius:3;
+    border-radius:3px;
    
 }
 
@@ -293,7 +281,7 @@ form.product_finder input[type=text] {
   float: left;
   width: 200px;
   height:25px;
-  background: white;
+  background: #ffffff;
   margin-top:25px;
   margin-left:15px;
   border-radius:3px;
@@ -308,7 +296,7 @@ form.product_finder button {
   margin-left:-10px;
   margin-bottom:0px;
   background: none;
-  color: white;
+  color: #ffffff;
   font-size: 12px;
   border: 0px solid grey;
   border-left: none;
@@ -348,8 +336,9 @@ form.product_finder::after {
     z-index:999;
     position:absolute;
     color: red;
-    font-family: roboto, 2em;
-    align-text:center;
+    font-family: roboto;
+    font-size: 2em;
+    text-align: left;
     
 }
 .header-social a{
