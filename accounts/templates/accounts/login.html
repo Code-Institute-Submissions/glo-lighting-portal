@@ -2,7 +2,7 @@
 {% load bootstrap_tags %}
 {% block title %}Login{% endblock %}
 {% block content %}
-<h2>Login</h2>
+<div class="top_space"></div>
 <form method="post">
   {% csrf_token %}
   {{ form | as_bootstrap }}

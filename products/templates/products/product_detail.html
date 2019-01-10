@@ -14,7 +14,8 @@
 
 <div class="top_space"></div>
     <div class="container">
-        <div class="row">  
+        <div class="row ">  
+       
          {% if user.brand %}
          <div class"edit_button">
          <a href="{% url 'edit_product' product.id %}" class="btn btn-success">Edit</a>
@@ -34,12 +35,13 @@
         {% csrf_token %}
                 <input type="hidden" name="id" value="{{product.id}}" />
                 <p><input type="hidden" name="quantity" value="1" /></p>
-                <p><input class="btn btn-success" type="submit" value="Add To Cart" /></p>
+                <p><input class="btn btn-success" type="submit" value="Add To Cart" />&nbsp;&nbsp;</p>
             </form>
         </div>
-        <img width="60px" height="auto" class="brand" src="{{MEDIA_URL}}logos/{{product.brand}}.png" alt="">
-<h3 class="card-title">{{product.name}}</3>
-                    
+        <div class="paddingsides">
+        <img width="60px" height="auto" class="brand " src="{{MEDIA_URL}}logos/{{product.brand}}.png" alt="">
+                    <h3 class="card-title ">{{product.name}}</3>
+                     
                     <h4>€{{product.bruto_price}} ex. btw</h4>
                     {% if product.brand %}
                     Brand:{{product.brand}}<br/>
@@ -100,7 +102,9 @@
                     {% if product.miscellaneous %}
                     <br/>
                     {{product.miscellaneous}}<br/>
-                    {% endif %}<br/>
+                    {% endif %}<br>
+                    </div>
+                    
                     
                 <span class="text-warning"> </div>
                 <div class="col-xs-12">
@@ -109,7 +113,8 @@
                         <div class="project_photo">
                         <p><img src="{{MEDIA_URL}}{{ product_image.image }}" width=180px></p>
         	        </div>
-                 </div> 
+                 </div>
+                 
 
                 {% endfor %}
                 </div>

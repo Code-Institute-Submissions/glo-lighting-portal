@@ -1,8 +1,17 @@
-
-h4{
+.caption_title a{
+    color:#a89b59;
+}
+.body_text p{
     color:black;
 }
 
+/*condesemed used to make check fit on mobiles phones*/
+html *{
+font-family: Roboto Condensed, Sans-serif;
+}
+h4{
+    color:black;
+}
 
 /*This overwrites the standard bootstrap navigation bar*/
 .navbar{
@@ -48,9 +57,7 @@ color:white;
 }
 
 /*any green text will be gold*/
-p {
-  color: #a89b59;
-}
+
 
 body {
     font-family: Arial;
@@ -316,10 +323,7 @@ form.product_finder::after {
 }
 
 /*This is the initial body text seen in articles*/
-.caption{
-    color:Black;
-    
-}
+
 
 /*simple way of adding some vertical space across the screen width*/
   .top_space{
@@ -377,7 +381,15 @@ color:#a89b59;
 margin-bottom:20px;
 }
 
-green text should be gold that is why this
+/*green text should be gold that is why this*/
 .text_color a{
 color:#a89b59;    
+}
+
+/*extra padding for side when diplay is telephone*/
+
+.paddingsides{
+    padding-left:10px;
+    padding-right:10px;
+   
 }

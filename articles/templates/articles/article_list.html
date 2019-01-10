@@ -1,4 +1,4 @@
-{% extends "base_detail.html" %} {% block content %}
+{% extends "base.html" %} {% block content %}
 <div class="wide_band_top">
     <div class="header-social">
         <p>    
@@ -16,12 +16,14 @@
         <div class="col-sm-4 col-lg-4 col-md-4 page_wrapper">
             <div class="articles">
                     <img  class="card-img-top img-fluid" src="{{MEDIA_URL}}{{article.image}}" alt="{{article.tag}}" width="200">
-                     <div class="caption">
+                    
+                    <div class="caption_title">
                     <h4><a href="#">{{article.title}}</a></h4>
-                   
-                       {{article.slug}}
+                    <div class="body-text">
+                    <p>{{article.slug}}</p>
                     <p>{{article.body}}</p>
-                    <p>{{article.date}}</p>
+                    <p>{{article.auther}} | {{article.date}}</p>
+                    </div>
                 </div>
             </div>
         </div>
