@@ -173,11 +173,20 @@ a:active {
     margin-left:3px;
 }
 /*This css overides the bootstrap theme removing the standard border*/
-.thumbnail {
-    top:20px;
-    border: 0px;
-    background-color: white;
-}
+/*.thumbnail {*/
+/*    top:20px;*/
+/*    border: 0px;*/
+/*    background-color: white;*/
+/*}*/
+
+.thumbnail{
+		    display:inline-block;
+		    width:100px;
+		    background-color:none;
+		    border:red;
+		}
+
+
 
 .add-to-cart{
     float:right;
