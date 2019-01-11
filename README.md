@@ -2,10 +2,10 @@
 TEMPLATE BUILT FROM GROUND UP...<br/>
 See demo: https://glo-lighting.herokuapp.com/
 <a href="http://www.gowild.nl/archimanic/designs.html" >
-Click here to see the initial designs</a>
+Click here to see the initial designs.</a>
 
 The original concept for this ecommerce website was named "glo lighting" however it was decided to change the name to "Archimanic" and incorperate other related categories. At present this project contains only lighting content but 
-Furniture and Bathrooms has yet to be added to the products/model.py
+Furniture and Bathrooms has yet to be added to the products/model.py.
 
 Archimanic is a service providing a show case for the ***best brands from all around the world.*** 
 The site is specifically built to facilitate the needs of interieur architects and designers
@@ -30,10 +30,6 @@ Apply for discount form
 ## Lighting Brands/Manufactures
 
 The manufacturers/sellers can request a seller account. The admin will register them under the name of their brand after a contract has been signed. 
-
-admin: Admin
-password:Lamps69*^<br/>
-username: Sandro password: lzfLamps69*^ 
 
 A user name & password will then be forwarded to the new owner of the account. 
 The seller will then be able to login write and edit text and product photos.
