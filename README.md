@@ -1,6 +1,6 @@
 # ARCHIMANIC
 TEMPLATE BUILT FROM GROUND UP...<br/>
-See demo: https://glo-lighting.herokuapp.com/
+See demo: https://glo-lighting.herokuapp.com/<br/>
 <a href="http://www.gowild.nl/archimanic/designs.html" >
 Click here to see the initial designs.</a>
 
@@ -17,7 +17,14 @@ According to the users profession will be awarded various discounts for each bra
 
 Architects and interior architects can register their projects and recieve commission.
 
-### Discount:
+username: Admin
+password:Lamps69*^<br/>
+
+username: Sandro password: lzfLamps69*^ 
+
+
+
+### Discount which will be added in response to requests:
 
 1. Architects max 10-20%
 2. Interior architects max 10-50%
@@ -41,7 +48,17 @@ A simple and clean cut user interface provides ease in finding in this case deco
 designers will be able to create mood boards and also purchase lamps directly.
 
 ## Existing Features
-- One categorie available. "LIGHTING".
+IMPOPRTANT:<br> 
+- The main navigation menu in the base.html contains:<br/>
+BATHROOMS - FURNITURE - LIGHTING...<br/>
+"Lighting" has been created and implemented as a working example<br/>
+
+
+- The second nav menu under the header contains the following menu items which can be discovered on each product page<br/> 
+All Brands - Articles - Lighting Types<br/><br> Under "Lighting Types" a dropdown menu exists with filters<br/> "Suspension","Floor","lighting","wall/ceiling","Table","Outside".<br/>
+<br/>Articles is actually a blog and writers/bloggers will be encouraged to sign up and contribute articles and photos.
+
+
 - Payment system via 'Stripe'.
 
 - Payment is simplified by not having to fill in register forms except for at the Checkout, this encourages the buyer to complete the transaction.
@@ -60,7 +77,7 @@ designers will be able to create mood boards and also purchase lamps directly.
 
 ## Features left to implement
 - In the future this website will expand its contents to other catagories..
-- A pop-up to enlarge detail images.<br>
+. and become a real website under www.Archimanic.com<br>
 The technologies applied in this project were: 
 
 - [Python] (https://www.python.org/)
@@ -190,7 +207,8 @@ Each app/directory has a models.py and views.py file.
 The models.py defines the field structure in the postgres database, when ever a "python3 manage.py makemigrations" followed buy "python3 manage.py migrate"  command a nieuw field will be added to the database.
 The views.py file contains the functions which inject data into the template files between the {% block content %} tags.
 
-#### Credits
+#### Credits<br/>
+Styling & code including logo by Steve Bolton.
 Many thanks to Code Institute in particular Brian, Katie, Matt, Richard, not forgetting the backup team who were there after the course had finished.
 
 The content material comes from Lzf the prices and information are fictitious.
